@@ -10,8 +10,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Flurl" Version="2.8.2" />
+        <PackageReference Include="Flurl.Http" Version="2.4.2" />
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
-        <PackageReference Include="RedditSharp" Version="1.1.14" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,7 +29,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="client-app\src\components" />
+      <Folder Include="Models" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TechSpace.Domain\TechSpace.Domain.csproj" />
+      <ProjectReference Include="..\TechSpace.Reddit\TechSpace.Reddit.csproj" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

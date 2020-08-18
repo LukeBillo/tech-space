@@ -1,18 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using TechSpace.Domain;
+using TechSpace.Services;
 
 namespace TechSpace.Controllers
 {
+    [ApiController]
+    [Route("spaces")]
     public class TechSpacesController : Controller
     {
-        public TechSpacesController(ITechSpacesService techSpacesService)
+        private readonly ITechSpacesService _techSpacesService;
+        private readonly ITechSpacesPostsService _techSpacesPostsService;
+
+        public TechSpacesController(ITechSpacesService techSpacesService, ITechSpacesPostsService techSpacesPostsService)
         {
-            
+            _techSpacesService = techSpacesService;
+            _techSpacesPostsService = techSpacesPostsService;
         }
 
         [HttpGet("all")]
-        public IActionResult AllSpaces()
+        public async Task<IActionResult> AllSpaces()
         {
-            return new OkResult();
+            var spaces = await _techSpacesService.GetAll();
+
+            var postsForAllSpaces = new List<TechnologySpacePost>();
+            foreach (var space in spaces)
+            {
+                var postsForSpace = await _techSpacesPostsService.GetPopularPostsForSpace(space);
+                postsForAllSpaces.AddRange(postsForSpace);
+            }
+
+            return new OkObjectResult(postsForAllSpaces);
         }
 
         [HttpGet("{name}")]

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3004a918-8a0a-4bad-8136-6b01a8e292af" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TechSpace/Helpers/RedditConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/Post.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Filters/WhereFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DEF7DA6D-9A2B-43C7-B57A-2A2AFD24B090/8b/3075cf58/RedditClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/RedditBaseData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Services/TechSpacesPostsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Domain/TechnologySpacePost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/RedditService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/Listing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/Kind.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Domain/FeedProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/RedditGeneric.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Services/TechSpacesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceFeed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DEF7DA6D-9A2B-43C7-B57A-2A2AFD24B090/41/e96eb42a/Subreddit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DEF7DA6D-9A2B-43C7-B57A-2A2AFD24B090/15/37eb6174/SubredditPosts.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace.Domain/TechnologySpace.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/TechSpace.Domain/Class1.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/LinkProvider.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/SpaceLink.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceLink.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpace.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/FeedProvider.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceFeed.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Services/TechSpacesService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Services/RedditService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Models/3rdParty/Reddit/Listing.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/TechSpace.Reddit.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Class1.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Filters/Where.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/RedditKind.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/GenericRedditResponse.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/GenericRedditData.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/GenericData.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/SubReddit.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Kind.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Listing.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/RedditBaseData.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Startup.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Filters/WhereFilter.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Services/TechSpacesPostsService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/RedditService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/RedditGeneric.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Post.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpacePost.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Helpers/RedditConverter.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/front-page/front-page.component.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/App.tsx" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gGjrkYzxUCZBW5POWsUeR4CRIg" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3500804" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29983923" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="C:\dev\personal\tech-space\TechSpace\client-app\node_modules\typescript\lib" />
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.TechSpace">
+    <configuration name="TechSpace" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TechSpace/TechSpace.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="TechSpace" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="TechSpace: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TechSpace/TechSpace.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3004a918-8a0a-4bad-8136-6b01a8e292af" name="Default Changelist" comment="" />
+      <created>1597748025009</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597748025009</updated>
+      <workItem from="1597748041548" duration="1621000" />
+      <workItem from="1597750272403" duration="3111000" />
+      <workItem from="1597758050438" duration="7899000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1035" y="425" key="#xdebugger.evaluate" timestamp="1597764525254">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1035" y="425" key="#xdebugger.evaluate/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764525254" />
+    <state width="480" height="464" key="DebuggerActiveHint" timestamp="1597764286612">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="480" height="464" key="DebuggerActiveHint/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764286612" />
+    <state width="2519" height="406" key="GridCell.Tab.0.bottom" timestamp="1597764750130">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="406" key="GridCell.Tab.0.bottom/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764750130" />
+    <state width="2519" height="406" key="GridCell.Tab.0.center" timestamp="1597764750130">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="406" key="GridCell.Tab.0.center/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764750130" />
+    <state width="2519" height="406" key="GridCell.Tab.0.left" timestamp="1597764750130">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="406" key="GridCell.Tab.0.left/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764750130" />
+    <state width="2519" height="406" key="GridCell.Tab.0.right" timestamp="1597764750130">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="406" key="GridCell.Tab.0.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764750130" />
+    <state width="2519" height="525" key="GridCell.Tab.1.bottom" timestamp="1597764745590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.1.bottom/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745590" />
+    <state width="2519" height="525" key="GridCell.Tab.1.center" timestamp="1597764745590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.1.center/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745590" />
+    <state width="2519" height="525" key="GridCell.Tab.1.left" timestamp="1597764745590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.1.left/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745590" />
+    <state width="2519" height="525" key="GridCell.Tab.1.right" timestamp="1597764745590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.1.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745590" />
+    <state width="2519" height="525" key="GridCell.Tab.2.bottom" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.2.bottom/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.2.center" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.2.center/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.2.left" timestamp="1597764745590">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.2.left/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745590" />
+    <state width="2519" height="525" key="GridCell.Tab.2.right" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.2.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.3.bottom" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.3.bottom/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.3.center" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.3.center/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.3.left" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.3.left/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.3.right" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.3.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.4.bottom" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.4.bottom/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.4.center" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.4.center/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.4.left" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.4.left/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state width="2519" height="525" key="GridCell.Tab.4.right" timestamp="1597764745591">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2519" height="525" key="GridCell.Tab.4.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597764745591" />
+    <state x="872" y="452" key="Rider.ProjectTemplateDialog.Size" timestamp="1597757740853">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="872" y="452" key="Rider.ProjectTemplateDialog.Size/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597757740853" />
+    <state x="936" y="340" key="run.anything.popup" timestamp="1597761555859">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="936" y="340" key="run.anything.popup/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597761555859" />
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1597750614277">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597750614277" />
+  </component>
+</project>
