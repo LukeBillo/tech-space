@@ -1,6 +1,6 @@
 using System;
 
-namespace SocialSpace
+namespace TechSpace
 {
     public class WeatherForecast
     {

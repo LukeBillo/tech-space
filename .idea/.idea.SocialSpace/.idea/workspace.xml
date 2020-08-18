@@ -8,13 +8,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/SocialSpace/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SocialSpace/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedditAPI.Client/RedditAccountClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Pages/Error.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SocialSpace/client-app/src/index.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/index.tsx" />
+        <option value="$PROJECT_DIR$/RedditAPI.Client/Class1.cs" />
+        <option value="$PROJECT_DIR$/RedditAPI.Client/RedditAccountClient.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/FeedController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/SpaceController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/SpacesController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" />
       </list>
     </option>
   </component>
@@ -30,13 +39,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\dev\personal\social-space\SocialSpace\client-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\dev\personal\tech-space\TechSpace\client-app\node_modules\typescript\lib" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.SocialSpace">
-    <configuration name="SocialSpace" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SocialSpace/SocialSpace.csproj" />
+  <component name="RunManager" selected=".NET Launch Settings Profile.TechSpace">
+    <configuration name="TechSpace" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TechSpace/TechSpace.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
-      <option name="LAUNCH_PROFILE_NAME" value="SocialSpace" />
+      <option name="LAUNCH_PROFILE_NAME" value="TechSpace" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -48,8 +57,8 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="SocialSpace: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SocialSpace/SocialSpace.csproj" />
+    <configuration name="TechSpace: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TechSpace/TechSpace.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -73,6 +82,7 @@
       <updated>1597184345973</updated>
       <workItem from="1597184356130" duration="2000" />
       <workItem from="1597397703888" duration="4766000" />
+      <workItem from="1597743842722" duration="2023000" />
     </task>
     <servers />
   </component>
@@ -100,6 +110,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1259" height="406" key="GridCell.Tab.0.right/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597415752112" />
+    <state x="872" y="452" key="Rider.ProjectTemplateDialog.Size" timestamp="1597745921401">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="872" y="452" key="Rider.ProjectTemplateDialog.Size/-3855.1440.1536.864/-2560.0.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1597745921401" />
     <state x="931" y="460" width="698" height="520" key="find.popup" timestamp="1597399545244">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

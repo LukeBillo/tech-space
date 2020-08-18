@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialSpace", "SocialSpace\SocialSpace.csproj", "{57C030D6-A70E-417D-8097-AFF01427F41F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechSpace", "TechSpace\TechSpace.csproj", "{57C030D6-A70E-417D-8097-AFF01427F41F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

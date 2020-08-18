@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\dev\personal\social-space" t="IncludeFlat">
+    <e p="C:\dev\personal\tech-space" t="IncludeFlat">
       <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="SocialSpace" t="IncludeRecursive">
+      <e p="TechSpace" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -146,12 +146,14 @@
           </e>
           <e p="tsconfig.json" t="Include" />
         </e>
-        <e p="Controllers" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="TechSpacesController.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="SocialSpace.AssemblyInfo.cs" t="Include" />
-              <e p="SocialSpace.RazorAssemblyInfo.cs" t="Include" />
+              <e p="TechSpace.AssemblyInfo.cs" t="Include" />
+              <e p="TechSpace.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -164,14 +166,14 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
-        <e p="SocialSpace.csproj" t="IncludeRecursive" />
+        <e p="TechSpace.csproj" t="IncludeRecursive" />
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
       </e>
-      <e p="SocialSpace.sln" t="IncludeFlat" />
+      <e p="TechSpace.sln" t="IncludeFlat" />
     </e>
     <e p="C:\Users\luke.billington\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\luke.billington\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_SocialSpace.1779855885.00" t="ExcludeRecursive" />
+    <e p="C:\Users\luke.billington\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_TechSpace.1779855885.00" t="ExcludeRecursive" />
     <e p="C:\Users\luke.billington\AppData\Roaming\JetBrains\Rider2020.1\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\luke.billington\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
   </component>

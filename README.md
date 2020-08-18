@@ -1,1 +1,1 @@
-# social-space
+# tech-space
