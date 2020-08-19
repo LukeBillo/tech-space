@@ -37,6 +37,17 @@
       <ProjectReference Include="..\TechSpace.Reddit\TechSpace.Reddit.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <TypeScriptCompile Include="client-app\src\App.test.tsx" />
+      <TypeScriptCompile Include="client-app\src\App.tsx" />
+      <TypeScriptCompile Include="client-app\src\components\front-page\front-page.component.tsx" />
+      <TypeScriptCompile Include="client-app\src\index.tsx" />
+      <TypeScriptCompile Include="client-app\src\react-app-env.d.ts" />
+      <TypeScriptCompile Include="client-app\src\services\tech-spaces.service.ts" />
+      <TypeScriptCompile Include="client-app\src\serviceWorker.ts" />
+      <TypeScriptCompile Include="client-app\src\setupTests.ts" />
+    </ItemGroup>
+
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
         <!-- Ensure Node.js is installed -->
         <Exec Command="node --version" ContinueOnError="true">

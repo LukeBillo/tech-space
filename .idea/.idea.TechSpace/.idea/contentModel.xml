@@ -40,6 +40,7 @@
           <e p="node_modules\@typescript-eslint\experimental-utils" t="IncludeRecursive" />
           <e p="node_modules\@typescript-eslint\parser" t="IncludeRecursive" />
           <e p="node_modules\@typescript-eslint\typescript-estree" t="IncludeRecursive" />
+          <e p="node_modules\axios" t="IncludeRecursive" />
           <e p="node_modules\babel-jest" t="IncludeRecursive" />
           <e p="node_modules\chalk" t="IncludeRecursive" />
           <e p="node_modules\chokidar" t="IncludeRecursive" />
@@ -147,6 +148,9 @@
             <e p="index.tsx" t="Include" />
             <e p="logo.svg" t="Include" />
             <e p="react-app-env.d.ts" t="Include" />
+            <e p="Services" t="Include">
+              <e p="tech-spaces.service.ts" t="Include" />
+            </e>
             <e p="serviceWorker.ts" t="Include" />
             <e p="setupTests.ts" t="Include" />
           </e>
