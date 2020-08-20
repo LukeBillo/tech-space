@@ -60,7 +60,6 @@
           <e p="node_modules\jest-serializer" t="IncludeRecursive" />
           <e p="node_modules\jest-util" t="IncludeRecursive" />
           <e p="node_modules\jest-worker" t="IncludeRecursive" />
-          <e p="node_modules\node-sass" t="IncludeRecursive" />
           <e p="node_modules\pretty-error" t="IncludeRecursive" />
           <e p="node_modules\pretty-format" t="IncludeRecursive" />
           <e p="node_modules\react" t="IncludeRecursive" />
@@ -140,13 +139,24 @@
             <e p="App.test.tsx" t="Include" />
             <e p="App.tsx" t="Include" />
             <e p="components" t="Include">
+              <e p="content-container" t="Include">
+                <e p="content-container.component.tsx" t="Include" />
+                <e p="content-container.scss" t="Include" />
+              </e>
               <e p="front-page" t="Include">
                 <e p="front-page.component.tsx" t="Include" />
                 <e p="front-page.scss" t="Include" />
               </e>
+              <e p="sidebar" t="Include">
+                <e p="sidebar.component.tsx" t="Include" />
+                <e p="sidebar.css" t="Include" />
+              </e>
             </e>
             <e p="index.tsx" t="Include" />
             <e p="logo.svg" t="Include" />
+            <e p="Models" t="Include">
+              <e p="technology-space.model.ts" t="Include" />
+            </e>
             <e p="react-app-env.d.ts" t="Include" />
             <e p="Services" t="Include">
               <e p="tech-spaces.service.ts" t="Include" />
@@ -158,6 +168,7 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="TechSpacesController.cs" t="Include" />
+          <e p="TechSpacesPostsController.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
           <e p="RedditConverter.cs" t="Include" />

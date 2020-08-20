@@ -10,7 +10,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -23,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/TechSpace/Services/TechSpacesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DEF7DA6D-9A2B-43C7-B57A-2A2AFD24B090/8b/3075cf58/RedditClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TechSpace.Reddit/Models/RedditBaseData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TechSpace/Controllers/TechSpacesPostsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceFeed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TechSpace/Services/TechSpacesPostsService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TechSpace.Domain/TechnologySpacePost.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,10 +45,7 @@
         <option value="$PROJECT_DIR$/TechSpace.Domain/LinkProvider.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Domain/SpaceLink.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceLink.cs" />
-        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpace.cs" />
-        <option value="$PROJECT_DIR$/TechSpace.Domain/FeedProvider.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpaceFeed.cs" />
-        <option value="$PROJECT_DIR$/TechSpace/Services/TechSpacesService.cs" />
         <option value="$PROJECT_DIR$/TechSpace/Services/RedditService.cs" />
         <option value="$PROJECT_DIR$/TechSpace/Models/3rdParty/Reddit/Listing.cs" />
         <option value="$PROJECT_DIR$/TechSpace/TechSpace.Reddit.cs" />
@@ -59,7 +59,6 @@
         <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Kind.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Listing.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/RedditBaseData.cs" />
-        <option value="$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" />
         <option value="$PROJECT_DIR$/TechSpace/Startup.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Reddit/Filters/WhereFilter.cs" />
         <option value="$PROJECT_DIR$/TechSpace/Services/TechSpacesPostsService.cs" />
@@ -68,8 +67,6 @@
         <option value="$PROJECT_DIR$/TechSpace.Reddit/Models/Post.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpacePost.cs" />
         <option value="$PROJECT_DIR$/TechSpace/Helpers/RedditConverter.cs" />
-        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/front-page/front-page.component.tsx" />
-        <option value="$PROJECT_DIR$/TechSpace/client-app/src/App.tsx" />
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/data/tech-space.service.ts" />
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/config/api.config.ts" />
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/api/tech-space.http.ts" />
@@ -77,6 +74,22 @@
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/api/services/tech-spaces.service.ts" />
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/api/api-clients.factory.ts" />
         <option value="$PROJECT_DIR$/TechSpace/client-app/src/services/tech-spaces.service.ts" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/TechnologySpace.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/models/technology-space.model.ts" />
+        <option value="$PROJECT_DIR$/TechSpace.Domain/FeedProvider.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Services/TechSpacesService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/TechSpacesController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/Controllers/TechSpacesPostsController.cs" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/content-container/content-container.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/content-container/content-container.scss.ts" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/content-container/content-container.component.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/App.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/front-page/front-page.component.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/components/sidebar/sidebar.component.tsx" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/App.css" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/src/tailwind.css" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/postcss.config.js" />
+        <option value="$PROJECT_DIR$/TechSpace/client-app/package.json" />
       </list>
     </option>
   </component>
@@ -94,6 +107,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="ts.external.directory.path" value="C:\dev\personal\tech-space\TechSpace\client-app\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\dev\personal\tech-space\TechSpace\client-app\src\models\technology-space.model.ts" />
+    </key>
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.TechSpace">
     <configuration name="TechSpace" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -137,7 +155,8 @@
       <workItem from="1597748041548" duration="1621000" />
       <workItem from="1597750272403" duration="3111000" />
       <workItem from="1597758050438" duration="8001000" />
-      <workItem from="1597822934066" duration="8338000" />
+      <workItem from="1597822934066" duration="8656000" />
+      <workItem from="1597908945882" duration="14304000" />
     </task>
     <servers />
   </component>
