@@ -1,8 +1,5 @@
 ﻿import Axios, {AxiosInstance} from "axios";
-
-export class TechnologySpace {
-    
-}
+import {TechnologySpace} from "../models/technology-space.model";
 
 export class TechSpacesService {
     private readonly axiosClient: AxiosInstance;
