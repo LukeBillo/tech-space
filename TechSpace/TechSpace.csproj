@@ -41,7 +41,6 @@
       <TypeScriptCompile Include="client-app\src\App.test.tsx" />
       <TypeScriptCompile Include="client-app\src\App.tsx" />
       <TypeScriptCompile Include="client-app\src\components\content-container\content-container.component.tsx" />
-      <Content Include="client-app\src\components\content-container\content-container.scss" />
       <TypeScriptCompile Include="client-app\src\components\front-page\front-page.component.tsx" />
       <TypeScriptCompile Include="client-app\src\components\sidebar\sidebar.component.tsx" />
       <TypeScriptCompile Include="client-app\src\index.tsx" />

@@ -1,0 +1,1 @@
+export type FeedProvider = "Reddit" | "Dev.to"

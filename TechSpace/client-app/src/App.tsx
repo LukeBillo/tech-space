@@ -1,13 +1,16 @@
-import React from 'react';
-import './App.scss';
-import {SideBar} from "./components/sidebar/sidebar.component";
-import {ContentContainer} from "./components/content-container/content-container.component";
+import React from "react";
+import { SideBar } from "./components/sidebar/sidebar.component";
+import { ContentSpace } from "./components/content-space/content-space.component";
+import { NavBar } from "./components/navbar/navbar.component";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="App max-w-full max-h-full bg-white">
+      <NavBar />
+      <div className={"container flex flex-row"}>
         <SideBar />
-        <ContentContainer />
+        <ContentSpace />
+      </div>
     </div>
   );
 }

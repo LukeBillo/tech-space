@@ -1,4 +1,4 @@
-﻿export interface TechnologySpace {
+﻿export type TechnologySpace = {
     name: string;
     description: string;
 }

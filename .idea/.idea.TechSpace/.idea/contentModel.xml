@@ -10,6 +10,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="client-app" t="Include">
           <e p=".gitignore" t="Include" />
+          <e p=".stylelintrc" t="Include" />
           <e p="node_modules\@babel\parser" t="IncludeRecursive" />
           <e p="node_modules\@babel\types" t="IncludeRecursive" />
           <e p="node_modules\@jest\console" t="IncludeRecursive" />
@@ -44,6 +45,7 @@
           <e p="node_modules\babel-jest" t="IncludeRecursive" />
           <e p="node_modules\chalk" t="IncludeRecursive" />
           <e p="node_modules\chokidar" t="IncludeRecursive" />
+          <e p="node_modules\chokidar-cli" t="IncludeRecursive" />
           <e p="node_modules\csstype" t="IncludeRecursive" />
           <e p="node_modules\diff-sequences" t="IncludeRecursive" />
           <e p="node_modules\dotenv" t="IncludeRecursive" />
@@ -60,6 +62,7 @@
           <e p="node_modules\jest-serializer" t="IncludeRecursive" />
           <e p="node_modules\jest-util" t="IncludeRecursive" />
           <e p="node_modules\jest-worker" t="IncludeRecursive" />
+          <e p="node_modules\npm-run-all" t="IncludeRecursive" />
           <e p="node_modules\pretty-error" t="IncludeRecursive" />
           <e p="node_modules\pretty-format" t="IncludeRecursive" />
           <e p="node_modules\react" t="IncludeRecursive" />
@@ -67,6 +70,7 @@
           <e p="node_modules\react-scripts" t="IncludeRecursive" />
           <e p="node_modules\realpath-native" t="IncludeRecursive" />
           <e p="node_modules\source-map" t="IncludeRecursive" />
+          <e p="node_modules\tailwindcss" t="IncludeRecursive" />
           <e p="node_modules\typescript" t="IncludeRecursive">
             <e p="lib\lib.d.ts" t="IncludeRecursive" />
             <e p="lib\lib.dom.d.ts" t="IncludeRecursive" />
@@ -135,35 +139,45 @@
           </e>
           <e p="README.md" t="Include" />
           <e p="src" t="Include">
-            <e p="App.scss" t="Include" />
             <e p="App.test.tsx" t="Include" />
             <e p="App.tsx" t="Include" />
             <e p="components" t="Include">
-              <e p="content-container" t="Include">
-                <e p="content-container.component.tsx" t="Include" />
-                <e p="content-container.scss" t="Include" />
+              <e p="content-space" t="Include">
+                <e p="content-space.component.tsx" t="Include" />
               </e>
-              <e p="front-page" t="Include">
-                <e p="front-page.component.tsx" t="Include" />
-                <e p="front-page.scss" t="Include" />
+              <e p="navbar" t="Include">
+                <e p="navbar.component.tsx" t="Include" />
+                <e p="navbar.css" t="Include" />
               </e>
               <e p="sidebar" t="Include">
                 <e p="sidebar.component.tsx" t="Include" />
                 <e p="sidebar.css" t="Include" />
+                <e p="spaces-side-navigation" t="Include">
+                  <e p="loading-spaces.component.tsx" t="Include" />
+                  <e p="space-nav-item.component.tsx" t="Include" />
+                  <e p="spaces-side-navigation.component.tsx" t="Include" />
+                </e>
               </e>
             </e>
             <e p="index.tsx" t="Include" />
             <e p="logo.svg" t="Include" />
             <e p="Models" t="Include">
+              <e p="feed-provider.enum.ts" t="Include" />
+              <e p="technology-space-post.model.ts" t="Include" />
               <e p="technology-space.model.ts" t="Include" />
             </e>
             <e p="react-app-env.d.ts" t="Include" />
             <e p="Services" t="Include">
+              <e p="axios.client.ts" t="Include" />
+              <e p="tech-spaces-posts.service.ts" t="Include" />
               <e p="tech-spaces.service.ts" t="Include" />
             </e>
             <e p="serviceWorker.ts" t="Include" />
             <e p="setupTests.ts" t="Include" />
+            <e p="tailwind.css" t="Include" />
+            <e p="tailwind.output.css" t="Include" />
           </e>
+          <e p="tailwind.config.js" t="Include" />
           <e p="tsconfig.json" t="Include" />
         </e>
         <e p="Controllers" t="Include">

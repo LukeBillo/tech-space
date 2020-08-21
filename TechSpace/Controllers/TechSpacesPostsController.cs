@@ -6,7 +6,7 @@ using TechSpace.Services;
 
 namespace TechSpace.Controllers
 {
-    [Route("spaces")]
+    [Route("spaces/{name}/posts")]
     public class TechSpacesPostsController
     {
         private readonly ITechSpacesService _techSpacesService;
@@ -17,9 +17,22 @@ namespace TechSpace.Controllers
             _techSpacesService = techSpacesService;
             _techSpacesPostsService = techSpacesPostsService;
         }
-        
-        [HttpGet("popular/posts")]
-        public async Task<IActionResult> GetPopularPosts()
+
+        [HttpGet]
+        public async Task<IActionResult> GetPostsForSpace([FromRoute] string name)
+        {
+            if (name == "popular")
+            {
+                var popularPostsForAllSpaces = await GetPopularPosts();
+                return new OkObjectResult(popularPostsForAllSpaces);
+            }
+            
+            var space = await _techSpacesService.Get(name);
+            var postsForSpace = await _techSpacesPostsService.GetPopularPostsForSpace(space);
+            return new OkObjectResult(postsForSpace);
+        }
+
+        private async Task<List<TechnologySpacePost>> GetPopularPosts()
         {
             var spaces = await _techSpacesService.GetAll();
             var postsForAllSpaces = new List<TechnologySpacePost>();
@@ -30,15 +43,7 @@ namespace TechSpace.Controllers
                 postsForAllSpaces.AddRange(postsForSpace);
             }
 
-            return new OkObjectResult(postsForAllSpaces);
-        }
-        
-        [HttpGet("{name}/posts")]
-        public async Task<IActionResult> GetPostsForSpace([FromRoute] string name)
-        {
-            var space = await _techSpacesService.Get(name);
-            var postsForSpace = await _techSpacesPostsService.GetPopularPostsForSpace(space);
-            return new OkObjectResult(postsForSpace);
+            return postsForAllSpaces;
         }
     }
 }
