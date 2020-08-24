@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3004a918-8a0a-4bad-8136-6b01a8e292af" name="Default Changelist" comment="" />
+    <list default="true" id="3004a918-8a0a-4bad-8136-6b01a8e292af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TechSpace/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace/client-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace/client-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace/client-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace/client-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace/client-app/src/components/content-space/content-space.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace/client-app/src/components/content-space/content-space.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace/client-app/src/components/sidebar/sidebar.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace/client-app/src/components/sidebar/sidebar.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace/client-app/src/components/sidebar/spaces-side-navigation/loading-spaces.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace/client-app/src/components/sidebar/spaces-side-navigation/loading-spaces.component.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +25,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TechSpace.Domain/FeedProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,6 +107,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1gGjrkYzxUCZBW5POWsUeR4CRIg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -102,8 +116,11 @@
   <component name="PropertiesComponent">
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3500804" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29983923" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\dev\personal\tech-space\TechSpace\client-app\node_modules\typescript\lib" />
@@ -126,7 +143,7 @@
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
-        <option name="Build" />
+        <option name="Build" enabled="true" />
       </method>
     </configuration>
     <configuration name="TechSpace: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -141,9 +158,12 @@
       <option name="SEND_DEBUG_REQUEST" value="1" />
       <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
-        <option name="Build" />
+        <option name="Build" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -159,11 +179,25 @@
       <workItem from="1597908945882" duration="14548000" />
       <workItem from="1597996930298" duration="2950000" />
       <workItem from="1598002811781" duration="6033000" />
+      <workItem from="1598116938512" duration="589000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

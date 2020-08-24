@@ -1,6 +1,6 @@
 ﻿import React from "react";
-import {FrontPage} from "../front-page/front-page.component";
+import { DisplaySpace } from "./display-space/display-space.component";
 
 export const ContentSpace = () => {
-    return (<FrontPage />); 
+    return (<DisplaySpace />); 
 }
