@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Luke\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Luke\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_TechSpace.993464805.00" t="ExcludeRecursive" />
-    <e p="E:\dev\tech-space" t="IncludeFlat">
+    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_TechSpace.890693240.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.1\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.1\extensions" t="IncludeRecursive" />
+    <e p="E:\Projects\tech-space" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TechSpace" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -12,6 +14,30 @@
         <e p="client-app" t="Include">
           <e p=".gitignore" t="Include" />
           <e p=".stylelintrc" t="Include" />
+          <e p="build" t="Include">
+            <e p="favicon.ico" t="Include" />
+            <e p="index.html" t="Include" />
+            <e p="logo192.png" t="Include" />
+            <e p="logo512.png" t="Include" />
+            <e p="precache-manifest.8af958dc30b02aaa9cec47300ba12480.js" t="Include" />
+            <e p="robots.txt" t="Include" />
+            <e p="service-worker.js" t="Include" />
+            <e p="static" t="Include">
+              <e p="css" t="Include">
+                <e p="main.a95e5808.chunk.css" t="Include" />
+                <e p="main.a95e5808.chunk.css.map" t="Include" />
+              </e>
+              <e p="js" t="Include">
+                <e p="2.de26a1d3.chunk.js" t="Include" />
+                <e p="2.de26a1d3.chunk.js.LICENSE.txt" t="Include" />
+                <e p="2.de26a1d3.chunk.js.map" t="Include" />
+                <e p="main.ea2f0664.chunk.js" t="Include" />
+                <e p="main.ea2f0664.chunk.js.map" t="Include" />
+                <e p="runtime-main.62e09ec8.js" t="Include" />
+                <e p="runtime-main.62e09ec8.js.map" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="node_modules\@babel\parser" t="IncludeRecursive" />
           <e p="node_modules\@babel\types" t="IncludeRecursive" />
           <e p="node_modules\@jest\console" t="IncludeRecursive" />
@@ -96,6 +122,9 @@
               </e>
               <e p="content-space" t="Include">
                 <e p="content-space.component.tsx" t="Include" />
+                <e p="display-space" t="Include">
+                  <e p="display-space.component.tsx" t="Include" />
+                </e>
               </e>
               <e p="front-page" t="Include">
                 <e p="front-page.component.tsx" t="Include" />
@@ -130,6 +159,7 @@
             <e p="serviceWorker.ts" t="Include" />
             <e p="setupTests.ts" t="Include" />
             <e p="tailwind.css" t="Include" />
+            <e p="tailwind.output.css" t="Include" />
           </e>
           <e p="tailwind.config.js" t="Include" />
           <e p="tsconfig.json" t="Include" />
@@ -141,10 +171,10 @@
         <e p="Helpers" t="Include">
           <e p="RedditConverter.cs" t="Include" />
         </e>
-        <e p="Models" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
               <e p="TechSpace.AssemblyInfo.cs" t="Include" />
               <e p="TechSpace.RazorAssemblyInfo.cs" t="Include" />
             </e>
@@ -166,12 +196,25 @@
         <e p="Startup.cs" t="Include" />
         <e p="TechSpace.csproj" t="IncludeRecursive" />
       </e>
+      <e p="TechSpace.Database" t="IncludeRecursive">
+        <e p="_0001InitialTablesAndRedditSetup.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="TechSpace.Database.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TechSpace.Database.csproj" t="IncludeRecursive" />
+      </e>
       <e p="TechSpace.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="FeedProvider.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
               <e p="TechSpace.Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -189,6 +232,7 @@
         <e p="Filters" t="Include">
           <e p="WhereFilter.cs" t="Include" />
         </e>
+        <e p="IRedditApi.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="Kind.cs" t="Include" />
           <e p="Listing.cs" t="Include" />
@@ -199,11 +243,12 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
               <e p="TechSpace.Reddit.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="RedditService.cs" t="Include" />
+        <e p="RedditClient.cs" t="Include" />
         <e p="TechSpace.Reddit.csproj" t="IncludeRecursive" />
       </e>
       <e p="TechSpace.sln" t="IncludeFlat" />

@@ -16,11 +16,11 @@ namespace TechSpace.Services
 
     public class TechSpacesPostsService : ITechSpacesPostsService
     {
-        private readonly IRedditService _redditService;
+        private readonly IRedditClient _redditClient;
 
-        public TechSpacesPostsService(IRedditService redditService)
+        public TechSpacesPostsService(IRedditClient redditClient)
         {
-            _redditService = redditService;
+            _redditClient = redditClient;
         }
         
         public async Task<List<TechnologySpacePost>> GetPopularPostsForSpace(TechnologySpace space)
@@ -36,7 +36,7 @@ namespace TechSpace.Services
             
             foreach (var redditFeed in redditFeeds)
             {
-                var postsForSubReddit = await _redditService.GetPostsForSubreddit(redditFeed.Connection.Resource, postFilter);
+                var postsForSubReddit = await _redditClient.GetSubredditPosts(redditFeed.Connection.Resource, postFilter);
                 posts.AddRange(postsForSubReddit);
             }
 

@@ -3,7 +3,7 @@ import './navbar.css';
 
 export const NavBar: FunctionComponent = () => {
     return (
-        <div className={"NavBar border-b shadow-lg flex align-middle"}>
+        <div className={"NavBar bg-gray-800 shadow-lg flex align-middle my-auto"}>
             <h1>TechSpace</h1>
         </div>
     );

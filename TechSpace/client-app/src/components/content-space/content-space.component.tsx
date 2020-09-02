@@ -2,5 +2,9 @@
 import { DisplaySpace } from "./display-space/display-space.component";
 
 export const ContentSpace = () => {
-    return (<DisplaySpace />); 
+    return (
+        <div className="ContentSpace p-2">
+            <DisplaySpace />
+        </div>
+    ); 
 }

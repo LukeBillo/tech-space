@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TechSpace.Domain;
@@ -20,7 +19,7 @@ namespace TechSpace.Services
             {
                 new TechnologySpace
                 {
-                    Id = Guid.NewGuid(),
+                    Identifier = "csharp",
                     Name = "C#",
                     Description = "Everything C# and .NET related",
                     Feeds = new List<TechnologySpaceFeed>
@@ -47,7 +46,7 @@ namespace TechSpace.Services
                 },
                 new TechnologySpace
                 {
-                    Id = Guid.NewGuid(),
+                    Identifier = "javaScript",
                     Name = "JavaScript",
                     Description = "All things JavaScript",
                     Feeds = new List<TechnologySpaceFeed>

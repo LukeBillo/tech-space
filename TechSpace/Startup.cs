@@ -29,7 +29,7 @@ namespace TechSpace
             services.AddSingleton<ITechSpacesPostsService, TechSpacesPostsService>();
             
             // Services that go to external APIs
-            services.AddSingleton<IRedditService, RedditService>();
+            services.AddSingleton<IRedditClient, RedditClient>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -10,9 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Flurl" Version="2.8.2" />
-        <PackageReference Include="Flurl.Http" Version="2.4.2" />
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+        <PackageReference Include="Refit" Version="5.1.67" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,16 +19,14 @@
         <Content Remove="$(SpaRoot)**" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+        <None Remove="Models\**" />
+        <Content Remove="Models\**" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="client-app\package-lock.json" />
       <_ContentIncludedByDefault Remove="client-app\package.json" />
       <_ContentIncludedByDefault Remove="client-app\public\manifest.json" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Models" />
     </ItemGroup>
 
     <ItemGroup>
@@ -49,6 +46,14 @@
       <TypeScriptCompile Include="client-app\src\services\tech-spaces.service.ts" />
       <TypeScriptCompile Include="client-app\src\serviceWorker.ts" />
       <TypeScriptCompile Include="client-app\src\setupTests.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Models\**" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
