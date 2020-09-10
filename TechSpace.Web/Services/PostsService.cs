@@ -5,34 +5,35 @@ using TechSpace.Domain;
 using TechSpace.Helpers;
 using TechSpace.Reddit;
 using TechSpace.Reddit.Filters;
-using TechSpace.Reddit.Models;
+using RedditPost = TechSpace.Reddit.Models.Post;
+using Post = TechSpace.Domain.Post;
 
-namespace TechSpace.Services
+namespace TechSpace.Web.Services
 {
-    public interface ITechSpacesPostsService
+    public interface IPostsService
     {
-        Task<List<TechnologySpacePost>> GetPopularPostsForSpace(TechnologySpace space);
+        Task<List<Post>> GetPopularPostsForSpace(Space space);
     }
 
-    public class TechSpacesPostsService : ITechSpacesPostsService
+    public class PostsService : IPostsService
     {
         private readonly IRedditClient _redditClient;
 
-        public TechSpacesPostsService(IRedditClient redditClient)
+        public PostsService(IRedditClient redditClient)
         {
             _redditClient = redditClient;
         }
         
-        public async Task<List<TechnologySpacePost>> GetPopularPostsForSpace(TechnologySpace space)
+        public async Task<List<Post>> GetPopularPostsForSpace(Space space)
         {
             var redditPosts = await GetRedditPostsForSpace(space, PostFilter.Hot);
             return redditPosts;
         }
 
-        private async Task<List<TechnologySpacePost>> GetRedditPostsForSpace(TechnologySpace space, PostFilter postFilter)
+        private async Task<List<Post>> GetRedditPostsForSpace(Space space, PostFilter postFilter)
         {
             var redditFeeds = space.Feeds.Where(feed => feed.Provider == FeedProvider.Reddit);
-            var posts = new List<Post>();
+            var posts = new List<RedditPost>();
             
             foreach (var redditFeed in redditFeeds)
             {

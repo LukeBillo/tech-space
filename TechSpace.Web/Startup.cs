@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TechSpace.Data.DependencyInjection;
 using TechSpace.Reddit;
 using TechSpace.Services;
+using TechSpace.Web.Services;
 
 namespace TechSpace
 {
@@ -24,9 +26,11 @@ namespace TechSpace
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "client-app/build"; });
 
+            services.AddTechSpaceRepositories(Configuration["ConnectionStrings:TechSpace"]);
+            
             // Services for tech spaces
-            services.AddSingleton<ITechSpacesService, TechSpacesService>();
-            services.AddSingleton<ITechSpacesPostsService, TechSpacesPostsService>();
+            services.AddSingleton<ITechSpacesService, SpacesService>();
+            services.AddSingleton<IPostsService, PostsService>();
             
             // Services that go to external APIs
             services.AddSingleton<IRedditClient, RedditClient>();

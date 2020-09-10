@@ -30,6 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TechSpace.Data\TechSpace.Data.csproj" />
       <ProjectReference Include="..\TechSpace.Domain\TechSpace.Domain.csproj" />
       <ProjectReference Include="..\TechSpace.Reddit\TechSpace.Reddit.csproj" />
     </ItemGroup>

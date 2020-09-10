@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TechSpace.Services;
+using TechSpace.Web.Services;
 
 namespace TechSpace.Controllers
 {
@@ -9,12 +10,12 @@ namespace TechSpace.Controllers
     public class TechSpacesController : Controller
     {
         private readonly ITechSpacesService _techSpacesService;
-        private readonly ITechSpacesPostsService _techSpacesPostsService;
+        private readonly IPostsService _postsService;
 
-        public TechSpacesController(ITechSpacesService techSpacesService, ITechSpacesPostsService techSpacesPostsService)
+        public TechSpacesController(ITechSpacesService techSpacesService, IPostsService postsService)
         {
             _techSpacesService = techSpacesService;
-            _techSpacesPostsService = techSpacesPostsService;
+            _postsService = postsService;
         }
 
         [HttpGet("all")]

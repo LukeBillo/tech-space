@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_TechSpace.890693240.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.1\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.1\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_TechSpace.890693240.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Luke\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
     <e p="E:\Projects\tech-space" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
-      <e p="TechSpace" t="IncludeRecursive">
+      <e p="TechSpace.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DependencyInjection" t="Include">
+          <e p="ServiceCollectionExtensions.cs" t="Include" />
+          <e p="TechSpaceDatabaseOptions.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Feed.cs" t="Include" />
+          <e p="Space.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
+              <e p="TechSpace.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpaceFeedsRepository.cs" t="Include" />
+        <e p="TechSpace.Data.csproj" t="IncludeRecursive" />
+        <e p="TechSpaceQueryFactoryManager.cs" t="Include" />
+        <e p="TechSpaceRepository.cs" t="Include" />
+      </e>
+      <e p="TechSpace.Data.Migrations" t="IncludeRecursive">
+        <e p="_0001InitialTablesAndRedditSetup.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MigrateUp.ps1" t="Include" />
+        <e p="MigrationOptions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="TechSpace.Data.Migrations.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Rollback.ps1" t="Include" />
+        <e p="TechSpace.Data.Migrations.csproj" t="IncludeRecursive" />
+        <e p="TestData" t="Include">
+          <e p="csharp-dotnet-reddit-feeds.sql" t="Include" />
+        </e>
+      </e>
+      <e p="TechSpace.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FeedProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
+              <e p="TechSpace.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Post.cs" t="Include" />
+        <e p="Space.cs" t="Include" />
+        <e p="SpaceFeed.cs" t="Include" />
+        <e p="TechSpace.Domain.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TechSpace.Reddit" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Exceptions" t="Include">
+          <e p="RedditGenericUnexpectedKindException.cs" t="Include" />
+        </e>
+        <e p="Filters" t="Include">
+          <e p="PostFilter.cs" t="Include" />
+        </e>
+        <e p="IRedditApi.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Kind.cs" t="Include" />
+          <e p="Listing.cs" t="Include" />
+          <e p="Post.cs" t="Include" />
+          <e p="RedditBaseData.cs" t="Include" />
+          <e p="RedditGeneric.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="RefitStubs.g.cs" t="Include" />
+              <e p="TechSpace.Reddit.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RedditClient.cs" t="Include" />
+        <e p="TechSpace.Reddit.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TechSpace.sln" t="IncludeFlat" />
+      <e p="TechSpace.Web" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -15,10 +101,12 @@
           <e p=".gitignore" t="Include" />
           <e p=".stylelintrc" t="Include" />
           <e p="build" t="Include">
+            <e p="asset-manifest.json" t="Include" />
             <e p="favicon.ico" t="Include" />
             <e p="index.html" t="Include" />
             <e p="logo192.png" t="Include" />
             <e p="logo512.png" t="Include" />
+            <e p="manifest.json" t="Include" />
             <e p="precache-manifest.8af958dc30b02aaa9cec47300ba12480.js" t="Include" />
             <e p="robots.txt" t="Include" />
             <e p="service-worker.js" t="Include" />
@@ -41,12 +129,12 @@
           <e p="node_modules\@babel\parser" t="IncludeRecursive" />
           <e p="node_modules\@babel\types" t="IncludeRecursive" />
           <e p="node_modules\@jest\console" t="IncludeRecursive" />
+          <e p="node_modules\@jest\environment" t="IncludeRecursive" />
           <e p="node_modules\@jest\fake-timers" t="IncludeRecursive" />
           <e p="node_modules\@jest\source-map" t="IncludeRecursive" />
           <e p="node_modules\@jest\test-result" t="IncludeRecursive" />
+          <e p="node_modules\@jest\transform" t="IncludeRecursive" />
           <e p="node_modules\@jest\types" t="IncludeRecursive" />
-          <e p="node_modules\@mrmlnc\readdir-enhanced" t="IncludeRecursive" />
-          <e p="node_modules\@nodelib\fs.stat" t="IncludeRecursive" />
           <e p="node_modules\@reach\router" t="IncludeRecursive" />
           <e p="node_modules\@testing-library\jest-dom" t="IncludeRecursive" />
           <e p="node_modules\@testing-library\react" t="IncludeRecursive" />
@@ -69,39 +157,48 @@
           <e p="node_modules\@typescript-eslint\experimental-utils" t="IncludeRecursive" />
           <e p="node_modules\@typescript-eslint\parser" t="IncludeRecursive" />
           <e p="node_modules\@typescript-eslint\typescript-estree" t="IncludeRecursive" />
+          <e p="node_modules\aggregate-error" t="IncludeRecursive" />
+          <e p="node_modules\ansi-regex" t="IncludeRecursive" />
           <e p="node_modules\axios" t="IncludeRecursive" />
-          <e p="node_modules\babel-jest" t="IncludeRecursive" />
+          <e p="node_modules\camelcase" t="IncludeRecursive" />
           <e p="node_modules\chalk" t="IncludeRecursive" />
-          <e p="node_modules\chokidar" t="IncludeRecursive" />
           <e p="node_modules\chokidar-cli" t="IncludeRecursive" />
+          <e p="node_modules\clean-stack" t="IncludeRecursive" />
           <e p="node_modules\csstype" t="IncludeRecursive" />
+          <e p="node_modules\del" t="IncludeRecursive" />
           <e p="node_modules\diff-sequences" t="IncludeRecursive" />
-          <e p="node_modules\dotenv" t="IncludeRecursive" />
-          <e p="node_modules\dotenv-expand" t="IncludeRecursive" />
-          <e p="node_modules\fast-glob" t="IncludeRecursive" />
-          <e p="node_modules\html-webpack-plugin" t="IncludeRecursive" />
+          <e p="node_modules\fast-json-stable-stringify" t="IncludeRecursive" />
+          <e p="node_modules\indent-string" t="IncludeRecursive" />
+          <e p="node_modules\is-path-cwd" t="IncludeRecursive" />
+          <e p="node_modules\is-path-in-cwd" t="IncludeRecursive" />
+          <e p="node_modules\is-path-inside" t="IncludeRecursive" />
           <e p="node_modules\jest" t="IncludeRecursive" />
           <e p="node_modules\jest-diff" t="IncludeRecursive" />
+          <e p="node_modules\jest-environment-jsdom-fourteen" t="IncludeRecursive" />
           <e p="node_modules\jest-get-type" t="IncludeRecursive" />
           <e p="node_modules\jest-haste-map" t="IncludeRecursive" />
           <e p="node_modules\jest-message-util" t="IncludeRecursive" />
           <e p="node_modules\jest-mock" t="IncludeRecursive" />
+          <e p="node_modules\jest-pnp-resolver" t="IncludeRecursive" />
+          <e p="node_modules\jest-regex-util" t="IncludeRecursive" />
           <e p="node_modules\jest-resolve" t="IncludeRecursive" />
           <e p="node_modules\jest-serializer" t="IncludeRecursive" />
           <e p="node_modules\jest-util" t="IncludeRecursive" />
           <e p="node_modules\jest-worker" t="IncludeRecursive" />
+          <e p="node_modules\make-dir" t="IncludeRecursive" />
           <e p="node_modules\npm-run-all" t="IncludeRecursive" />
-          <e p="node_modules\pretty-error" t="IncludeRecursive" />
+          <e p="node_modules\p-map" t="IncludeRecursive" />
+          <e p="node_modules\pirates" t="IncludeRecursive" />
           <e p="node_modules\pretty-format" t="IncludeRecursive" />
           <e p="node_modules\react" t="IncludeRecursive" />
           <e p="node_modules\react-dom" t="IncludeRecursive" />
           <e p="node_modules\react-scripts" t="IncludeRecursive" />
-          <e p="node_modules\realpath-native" t="IncludeRecursive" />
-          <e p="node_modules\source-map" t="IncludeRecursive" />
+          <e p="node_modules\strip-ansi" t="IncludeRecursive" />
           <e p="node_modules\tailwindcss" t="IncludeRecursive" />
+          <e p="node_modules\ts-pnp" t="IncludeRecursive" />
+          <e p="node_modules\tslib" t="IncludeRecursive" />
+          <e p="node_modules\tsutils" t="IncludeRecursive" />
           <e p="node_modules\typescript" t="IncludeRecursive" />
-          <e p="node_modules\upath" t="IncludeRecursive" />
-          <e p="node_modules\worker-farm" t="IncludeRecursive" />
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
           <e p="public" t="Include">
@@ -175,8 +272,8 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="RefitStubs.g.cs" t="Include" />
-              <e p="TechSpace.AssemblyInfo.cs" t="Include" />
-              <e p="TechSpace.RazorAssemblyInfo.cs" t="Include" />
+              <e p="TechSpace.Web.AssemblyInfo.cs" t="Include" />
+              <e p="TechSpace.Web.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -190,68 +287,12 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="TechSpacesPostsService.cs" t="Include" />
-          <e p="TechSpacesService.cs" t="Include" />
+          <e p="PostsService.cs" t="Include" />
+          <e p="SpacesService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="TechSpace.csproj" t="IncludeRecursive" />
+        <e p="TechSpace.Web.csproj" t="IncludeRecursive" />
       </e>
-      <e p="TechSpace.Database" t="IncludeRecursive">
-        <e p="_0001InitialTablesAndRedditSetup.cs" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
-              <e p="TechSpace.Database.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="TechSpace.Database.csproj" t="IncludeRecursive" />
-      </e>
-      <e p="TechSpace.Domain" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="FeedProvider.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="RefitStubs.g.cs" t="Include" />
-              <e p="TechSpace.Domain.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="TechnologySpace.cs" t="Include" />
-        <e p="TechnologySpaceFeed.cs" t="Include" />
-        <e p="TechnologySpacePost.cs" t="Include" />
-        <e p="TechSpace.Domain.csproj" t="IncludeRecursive" />
-      </e>
-      <e p="TechSpace.Reddit" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Exceptions" t="Include">
-          <e p="RedditGenericUnexpectedKindException.cs" t="Include" />
-        </e>
-        <e p="Filters" t="Include">
-          <e p="WhereFilter.cs" t="Include" />
-        </e>
-        <e p="IRedditApi.cs" t="Include" />
-        <e p="Models" t="Include">
-          <e p="Kind.cs" t="Include" />
-          <e p="Listing.cs" t="Include" />
-          <e p="Post.cs" t="Include" />
-          <e p="RedditBaseData.cs" t="Include" />
-          <e p="RedditGeneric.cs" t="Include" />
-        </e>
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
-              <e p="RefitStubs.g.cs" t="Include" />
-              <e p="TechSpace.Reddit.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="RedditClient.cs" t="Include" />
-        <e p="TechSpace.Reddit.csproj" t="IncludeRecursive" />
-      </e>
-      <e p="TechSpace.sln" t="IncludeFlat" />
     </e>
   </component>
 </project>

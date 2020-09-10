@@ -7,24 +7,24 @@ namespace TechSpace.Services
 {
     public interface ITechSpacesService
     {
-        Task<IList<TechnologySpace>> GetAll();
-        Task<TechnologySpace> Get(string name);
+        Task<IList<Space>> GetAll();
+        Task<Space> Get(string name);
     }
 
-    public class TechSpacesService : ITechSpacesService
+    public class SpacesService : ITechSpacesService
     {
-        public async Task<IList<TechnologySpace>> GetAll()
+        public async Task<IList<Space>> GetAll()
         {
-            return new List<TechnologySpace>
+            return new List<Space>
             {
-                new TechnologySpace
+                new Space
                 {
                     Identifier = "csharp",
                     Name = "C#",
                     Description = "Everything C# and .NET related",
-                    Feeds = new List<TechnologySpaceFeed>
+                    Feeds = new List<SpaceFeed>
                     {
-                        new TechnologySpaceFeed
+                        new SpaceFeed
                         {
                             Provider = FeedProvider.Reddit,
                             Connection = new FeedConnection
@@ -33,7 +33,7 @@ namespace TechSpace.Services
                                 Resource = "dotnet"
                             }
                         },
-                        new TechnologySpaceFeed
+                        new SpaceFeed
                         {
                             Provider = FeedProvider.Reddit,
                             Connection = new FeedConnection
@@ -44,14 +44,14 @@ namespace TechSpace.Services
                         }
                     }
                 },
-                new TechnologySpace
+                new Space
                 {
                     Identifier = "javaScript",
                     Name = "JavaScript",
                     Description = "All things JavaScript",
-                    Feeds = new List<TechnologySpaceFeed>
+                    Feeds = new List<SpaceFeed>
                     {
-                        new TechnologySpaceFeed
+                        new SpaceFeed
                         {
                             Provider = FeedProvider.Reddit,
                             Connection = new FeedConnection
@@ -65,7 +65,7 @@ namespace TechSpace.Services
             };
         }
 
-        public async Task<TechnologySpace> Get(string name)
+        public async Task<Space> Get(string name)
         {
             var allSpaces = await GetAll();
             return allSpaces.FirstOrDefault(space => space.Name == name);

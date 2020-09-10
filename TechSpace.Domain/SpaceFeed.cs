@@ -1,6 +1,6 @@
 ﻿namespace TechSpace.Domain
 {
-    public class TechnologySpaceFeed
+    public class SpaceFeed
     {
         public FeedProvider Provider { get; set; }
         public FeedConnection Connection { get; set; }

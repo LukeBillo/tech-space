@@ -1,6 +1,6 @@
 ﻿namespace TechSpace.Domain
 {
-    public class TechnologySpacePost
+    public class Post
     {
         public string Author { get; set; }
         public string Title { get; set; }
