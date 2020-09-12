@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TechSpace.Domain;
+using TechSpace.Data;
+using TechSpace.Data.Models;
+using TechSpace.Web.Models;
 
-namespace TechSpace.Services
+namespace TechSpace.Web.Services
 {
     public interface ITechSpacesService
     {
@@ -13,62 +15,33 @@ namespace TechSpace.Services
 
     public class SpacesService : ITechSpacesService
     {
+        private readonly ITechSpaceRepository _techSpaceRepository;
+        private readonly ITechSpaceFeedRepository _techSpaceFeedRepository;
+
+        public SpacesService(ITechSpaceRepository techSpaceRepository, ITechSpaceFeedRepository techSpaceFeedRepository)
+        {
+            _techSpaceRepository = techSpaceRepository;
+            _techSpaceFeedRepository = techSpaceFeedRepository;
+        }
+
         public async Task<IList<Space>> GetAll()
         {
-            return new List<Space>
-            {
-                new Space
+            var spaceRows = await _techSpaceRepository.GetAll();
+            var spaces = spaceRows
+                .Select(async spaceRow =>
                 {
-                    Identifier = "csharp",
-                    Name = "C#",
-                    Description = "Everything C# and .NET related",
-                    Feeds = new List<SpaceFeed>
-                    {
-                        new SpaceFeed
-                        {
-                            Provider = FeedProvider.Reddit,
-                            Connection = new FeedConnection
-                            {
-                                Name = ".NET",
-                                Resource = "dotnet"
-                            }
-                        },
-                        new SpaceFeed
-                        {
-                            Provider = FeedProvider.Reddit,
-                            Connection = new FeedConnection
-                            {
-                                Name = "C#",
-                                Resource = "csharp"
-                            }
-                        }
-                    }
-                },
-                new Space
-                {
-                    Identifier = "javaScript",
-                    Name = "JavaScript",
-                    Description = "All things JavaScript",
-                    Feeds = new List<SpaceFeed>
-                    {
-                        new SpaceFeed
-                        {
-                            Provider = FeedProvider.Reddit,
-                            Connection = new FeedConnection
-                            {
-                                Name = "Javascript",
-                                Resource = "javascript"
-                            }
-                        }
-                    }
-                }
-            };
+                    var spaceFeedRows = await _techSpaceFeedRepository.Get(spaceRow.Identifier);
+                    return new Space(spaceRow, spaceFeedRows);
+                });
+
+            return await Task.WhenAll(spaces);
         }
 
         public async Task<Space> Get(string name)
         {
-            var allSpaces = await GetAll();
-            return allSpaces.FirstOrDefault(space => space.Name == name);
+            var spaceRow = await _techSpaceRepository.GetByName(name);
+            var spaceFeedRows = await _techSpaceFeedRepository.Get(spaceRow.Identifier);
+            return new Space(spaceRow, spaceFeedRows);
         }
     }
 }

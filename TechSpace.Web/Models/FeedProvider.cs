@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace TechSpace.Domain
+namespace TechSpace.Web.Models
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FeedProvider

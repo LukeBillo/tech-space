@@ -1,6 +1,6 @@
 ﻿namespace TechSpace.Data.Models
 {
-    public class Space
+    public class SpaceRow
     {
         public string Identifier { get; set; }
         public string Name { get; set; }

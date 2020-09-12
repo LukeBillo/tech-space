@@ -1,16 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TechSpace.Data.DependencyInjection;
+using TechSpace.DevTo.DependencyInjection;
 using TechSpace.Reddit;
-using TechSpace.Services;
+using TechSpace.Reddit.DependencyInjection;
 using TechSpace.Web.Services;
 
-namespace TechSpace
+namespace TechSpace.Web
 {
     public class Startup
     {
@@ -26,14 +26,16 @@ namespace TechSpace
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "client-app/build"; });
 
+            // Data layer
             services.AddTechSpaceRepositories(Configuration["ConnectionStrings:TechSpace"]);
             
-            // Services for tech spaces
+            // Services for logic abstraction
             services.AddSingleton<ITechSpacesService, SpacesService>();
             services.AddSingleton<IPostsService, PostsService>();
-            
-            // Services that go to external APIs
-            services.AddSingleton<IRedditClient, RedditClient>();
+
+            // Connectors to 3rd party APIs
+            services.AddReddit(new RedditOptions());
+            services.AddDevTo(new DevToOptions());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

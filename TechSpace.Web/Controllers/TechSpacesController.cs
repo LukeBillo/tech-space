@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TechSpace.Services;
 using TechSpace.Web.Services;
 
-namespace TechSpace.Controllers
+namespace TechSpace.Web.Controllers
 {
     [ApiController]
     [Route("spaces")]

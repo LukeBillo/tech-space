@@ -10,8 +10,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
-        <PackageReference Include="Refit" Version="5.1.67" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
+        <PackageReference Include="Refit" Version="5.2.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -19,8 +19,6 @@
         <Content Remove="$(SpaRoot)**" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-        <None Remove="Models\**" />
-        <Content Remove="Models\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -31,30 +29,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\TechSpace.Data\TechSpace.Data.csproj" />
-      <ProjectReference Include="..\TechSpace.Domain\TechSpace.Domain.csproj" />
+      <ProjectReference Include="..\TechSpace.DevTo\TechSpace.DevTo.csproj" />
       <ProjectReference Include="..\TechSpace.Reddit\TechSpace.Reddit.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <TypeScriptCompile Include="client-app\src\App.test.tsx" />
-      <TypeScriptCompile Include="client-app\src\App.tsx" />
-      <TypeScriptCompile Include="client-app\src\components\content-container\content-container.component.tsx" />
-      <TypeScriptCompile Include="client-app\src\components\front-page\front-page.component.tsx" />
-      <TypeScriptCompile Include="client-app\src\components\sidebar\sidebar.component.tsx" />
-      <TypeScriptCompile Include="client-app\src\index.tsx" />
-      <TypeScriptCompile Include="client-app\src\models\technology-space.model.ts" />
-      <TypeScriptCompile Include="client-app\src\react-app-env.d.ts" />
-      <TypeScriptCompile Include="client-app\src\services\tech-spaces.service.ts" />
-      <TypeScriptCompile Include="client-app\src\serviceWorker.ts" />
-      <TypeScriptCompile Include="client-app\src\setupTests.ts" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Remove="Models\**" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Remove="Models\**" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -1,4 +1,4 @@
-﻿namespace TechSpace.Domain
+﻿namespace TechSpace.Web.Models
 {
     public class Post
     {

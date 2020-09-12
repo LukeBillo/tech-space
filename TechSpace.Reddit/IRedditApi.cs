@@ -4,9 +4,10 @@ using TechSpace.Reddit.Models;
 
 namespace TechSpace.Reddit
 {
+    [Headers("User-Agent: WebApp:TechSpace:v0.1 (by /u/crystelium)")]
     public interface IRedditApi
     {
-        [Get("/r/{subreddit}/{filter}")]
-        Task<RedditGeneric> GetSubredditPosts(string subreddit, string filter);
+        [Get("/r/{subreddit}/{filter}.json")]
+        Task<RedditGeneric> GetSubredditPosts(string subreddit, PostFilter filter);
     }
 }

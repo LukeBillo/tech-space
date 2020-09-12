@@ -1,8 +1,7 @@
-﻿using TechSpace.Domain;
-using TechSpace.Reddit.Models;
-using Post = TechSpace.Domain.Post;
+﻿using TechSpace.Web.Models;
+using Post = TechSpace.Web.Models.Post;
 
-namespace TechSpace.Helpers
+namespace TechSpace.Web.Helpers
 {
     public static class RedditConverter
     {

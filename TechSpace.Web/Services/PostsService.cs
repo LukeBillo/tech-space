@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TechSpace.Domain;
-using TechSpace.Helpers;
 using TechSpace.Reddit;
-using TechSpace.Reddit.Filters;
+using TechSpace.Reddit.Models;
+using TechSpace.Web.Helpers;
+using TechSpace.Web.Models;
 using RedditPost = TechSpace.Reddit.Models.Post;
-using Post = TechSpace.Domain.Post;
+using Post = TechSpace.Web.Models.Post;
 
 namespace TechSpace.Web.Services
 {

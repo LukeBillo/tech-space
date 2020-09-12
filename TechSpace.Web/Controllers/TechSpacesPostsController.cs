@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using TechSpace.Domain;
-using TechSpace.Services;
+using TechSpace.Web.Models;
 using TechSpace.Web.Services;
 
-namespace TechSpace.Controllers
+namespace TechSpace.Web.Controllers
 {
     [Route("spaces/{name}/posts")]
     public class TechSpacesPostsController

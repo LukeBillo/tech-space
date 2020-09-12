@@ -6,29 +6,29 @@ using TechSpace.Data.Models;
 
 namespace TechSpace.Data
 {
-    public interface ISpaceFeedsRepository
+    public interface ITechSpaceFeedRepository
     {
-        Task<IList<Feed>> Get(string spaceIdentifier);
+        Task<IList<SpaceFeedRow>> Get(string spaceIdentifier);
     }
 
-    public class SpaceFeedsRepository : ISpaceFeedsRepository
+    public class TechSpaceFeedRepository : ITechSpaceFeedRepository
     {
         private const string FeedsTable = "SpaceFeed";
         private readonly ITechSpaceQueryFactoryManager _queryFactoryManager;
 
-        public SpaceFeedsRepository(ITechSpaceQueryFactoryManager queryFactoryManager)
+        public TechSpaceFeedRepository(ITechSpaceQueryFactoryManager queryFactoryManager)
         {
             _queryFactoryManager = queryFactoryManager;
         }
         
-        public async Task<IList<Feed>> Get(string spaceIdentifier)
+        public async Task<IList<SpaceFeedRow>> Get(string spaceIdentifier)
         {
             using var database = _queryFactoryManager.CreateQueryFactory();
-            var feeds= await database.Query(FeedsTable)
+            var feedsForSpace = await database.Query(FeedsTable)
                 .Where("SpaceIdentifier", spaceIdentifier)
-                .GetAsync<Feed>();
+                .GetAsync<SpaceFeedRow>();
 
-            return feeds.ToList();
+            return feedsForSpace.ToList();
         }
     }
 }
