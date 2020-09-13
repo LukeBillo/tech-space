@@ -62,12 +62,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TechSpace.Data.Migrations/TestData/csharp-dotnet-reddit-feed-test.sql" />
-        <option value="$PROJECT_DIR$/TechSpace.Data/TechSpaceConnectionFactory.cs" />
-        <option value="$PROJECT_DIR$/TechSpace.Data/DependencyInjection/TechSpaceDatabaseOptions.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Data/TechSpaceQueryFactoryManager.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Data/DependencyInjection/ServiceCollectionExtensions.cs" />
-        <option value="$PROJECT_DIR$/TechSpace.Web/Services/PostsService.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Data/FeedsRepository.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Data/Models/Feed.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Data/SpaceFeedsRepository.cs" />
@@ -113,6 +109,10 @@
         <option value="$PROJECT_DIR$/TechSpace.DevTo/IDevToApi.cs" />
         <option value="$PROJECT_DIR$/TechSpace.DevTo/DevToClient.cs" />
         <option value="$PROJECT_DIR$/TechSpace.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Data.Migrations/TestData/csharp-dotnet-devto-feeds.sql" />
+        <option value="$PROJECT_DIR$/TechSpace.Data.Migrations/TestData/csharp-space.sql" />
+        <option value="$PROJECT_DIR$/TechSpace.Web/Services/PostsService.cs" />
+        <option value="$PROJECT_DIR$/TechSpace.Web/Helpers/DevToConverter.cs" />
       </list>
     </option>
   </component>
@@ -219,6 +219,7 @@
       <workItem from="1599746869272" duration="4272000" />
       <workItem from="1599754535556" duration="9001000" />
       <workItem from="1599873345377" duration="7298000" />
+      <workItem from="1600024724408" duration="3323000" />
     </task>
     <servers />
   </component>

@@ -45,7 +45,7 @@
         <e p="Rollback.ps1" t="Include" />
         <e p="TechSpace.Data.Migrations.csproj" t="IncludeRecursive" />
         <e p="TestData" t="Include">
-          <e p="csharp-dotnet-reddit-feeds.sql" t="Include" />
+          <e p="csharp-space.sql" t="Include" />
         </e>
       </e>
       <e p="TechSpace.DevTo" t="IncludeRecursive">
@@ -57,7 +57,7 @@
         <e p="DevToClient.cs" t="Include" />
         <e p="IDevToApi.cs" t="Include" />
         <e p="Models" t="Include">
-          <e p="Article.cs" t="Include" />
+          <e p="DevToArticle.cs" t="Include" />
           <e p="GetArticleQueryParams.cs" t="Include" />
           <e p="Organization.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -269,6 +269,7 @@
           <e p="TechSpacesPostsController.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
+          <e p="DevToConverter.cs" t="Include" />
           <e p="RedditConverter.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

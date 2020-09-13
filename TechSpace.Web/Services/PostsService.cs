@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TechSpace.DevTo;
+using TechSpace.DevTo.Models;
 using TechSpace.Reddit;
 using TechSpace.Reddit.Models;
 using TechSpace.Web.Helpers;
@@ -18,10 +20,12 @@ namespace TechSpace.Web.Services
     public class PostsService : IPostsService
     {
         private readonly IRedditClient _redditClient;
+        private readonly IDevToClient _devToClient;
 
-        public PostsService(IRedditClient redditClient)
+        public PostsService(IRedditClient redditClient, IDevToClient devToClient)
         {
             _redditClient = redditClient;
+            _devToClient = devToClient;
         }
         
         public async Task<List<Post>> GetPopularPostsForSpace(Space space)
@@ -43,6 +47,27 @@ namespace TechSpace.Web.Services
 
             return posts
                 .Select(RedditConverter.RedditPostToTechnologySpacePost)
+                .ToList();
+        }
+
+        private async Task<List<Post>> GetDevToPostsForSpace(Space space)
+        {
+            var devToFeeds = space.Feeds.Where(feed => feed.Provider == FeedProvider.DevTo);
+            var posts = new List<DevToArticle>();
+
+            foreach (var devToFeed in devToFeeds)
+            {
+                var articlesForTag = await _devToClient.GetArticles(new GetArticleQueryParams
+                {
+                    Top = 1,
+                    Tag = devToFeed.Connection.Resource
+                });
+
+                posts.AddRange(articlesForTag);
+            }
+
+            return posts
+                .Select(DevToConverter.DevToArticleToTechnologySpacePost)
                 .ToList();
         }
     }

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace TechSpace.DevTo.Models
 {
-    public class Article
+    public class DevToArticle
     {
         [JsonProperty("type_of")] 
         public string TypeOf { get; set; }
