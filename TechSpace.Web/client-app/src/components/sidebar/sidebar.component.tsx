@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, FunctionComponent } from "react";
+﻿import React, { FunctionComponent } from "react";
 import './sidebar.css';
 import { SpacesSideNavigation } from "./spaces-side-navigation/spaces-side-navigation.component";
 

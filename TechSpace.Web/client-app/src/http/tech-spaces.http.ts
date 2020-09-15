@@ -1,8 +1,8 @@
 ﻿import {AxiosInstance} from "axios";
-import { TechnologySpace } from "../models/technology-space.model";
+import { TechnologySpace } from "../shared/models/technology-space.model";
 import { AxiosClient } from "./axios.client";
 
-export class TechSpacesService {
+export class TechSpacesHttpClient {
     constructor(private readonly axiosClient: AxiosInstance) {}
 
     async getAll(): Promise<Array<TechnologySpace>> {
@@ -16,4 +16,4 @@ export class TechSpacesService {
     }
 }
 
-export const TechSpacesClient = new TechSpacesService(AxiosClient);
+export const TechSpacesClient = new TechSpacesHttpClient(AxiosClient);

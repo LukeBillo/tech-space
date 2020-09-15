@@ -2,7 +2,7 @@ import { AxiosInstance } from "axios";
 import { AxiosClient } from "./axios.client";
 import { TechnologySpacePost } from "../models/technology-space-post.model";
 
-export class TechSpacesPostsService {
+export class TechSpacesPostsHttpClient {
     constructor(private readonly axiosClient: AxiosInstance) {}
 
     async get(spaceName: string) {
@@ -15,4 +15,4 @@ export class TechSpacesPostsService {
     }
 }
 
-export const TechSpacesPostsClient = new TechSpacesPostsService(AxiosClient);
+export const TechSpacesPostsClient = new TechSpacesPostsHttpClient(AxiosClient);
