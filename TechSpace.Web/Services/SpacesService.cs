@@ -10,7 +10,7 @@ namespace TechSpace.Web.Services
     public interface ITechSpacesService
     {
         Task<IList<Space>> GetAll();
-        Task<Space> Get(string name);
+        Task<Space> Get(string id);
     }
 
     public class SpacesService : ITechSpacesService
@@ -37,9 +37,9 @@ namespace TechSpace.Web.Services
             return await Task.WhenAll(spaces);
         }
 
-        public async Task<Space> Get(string name)
+        public async Task<Space> Get(string id)
         {
-            var spaceRow = await _techSpaceRepository.GetByName(name);
+            var spaceRow = await _techSpaceRepository.GetById(id);
             var spaceFeedRows = await _techSpaceFeedRepository.Get(spaceRow.Identifier);
             return new Space(spaceRow, spaceFeedRows);
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 using TechSpace.Data.Models;
 
 namespace TechSpace.Web.Models
@@ -17,6 +18,7 @@ namespace TechSpace.Web.Models
             };
         }
         
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public FeedProvider Provider { get; set; }
         public FeedConnection Connection { get; set; }
     }

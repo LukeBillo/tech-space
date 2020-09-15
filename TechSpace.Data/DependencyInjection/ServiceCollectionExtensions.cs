@@ -13,6 +13,7 @@ namespace TechSpace.Data.DependencyInjection
             
             serviceCollection.AddSingleton<ITechSpaceQueryFactoryManager, TechSpaceQueryFactoryManager>();
             serviceCollection.AddSingleton<ITechSpaceRepository, TechSpaceRepository>();
+            serviceCollection.AddSingleton<ITechSpaceFeedRepository, TechSpaceFeedRepository>();
 
             return serviceCollection;
         }

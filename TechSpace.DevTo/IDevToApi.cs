@@ -7,7 +7,7 @@ namespace TechSpace.DevTo
 {
     public interface IDevToApi
     {
-        [Get("articles")]
+        [Get("/articles")]
         Task<List<DevToArticle>> GetArticles([Query] GetArticleQueryParams queryParams = null);
     }
 }

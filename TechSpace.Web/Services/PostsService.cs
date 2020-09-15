@@ -30,8 +30,12 @@ namespace TechSpace.Web.Services
         
         public async Task<List<Post>> GetPopularPostsForSpace(Space space)
         {
-            var redditPosts = await GetRedditPostsForSpace(space, PostFilter.Hot);
-            return redditPosts;
+            var redditPosts = GetRedditPostsForSpace(space, PostFilter.Hot);
+            var devToPosts = GetDevToPostsForSpace(space);
+
+            return (await Task.WhenAll(redditPosts, devToPosts))
+                .SelectMany(list => list)
+                .ToList();
         }
 
         private async Task<List<Post>> GetRedditPostsForSpace(Space space, PostFilter postFilter)
