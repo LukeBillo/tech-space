@@ -282,16 +282,10 @@
               <e p="content-space" t="Include">
                 <e p="content-space.component.tsx" t="Include" />
               </e>
-              <e p="navbar" t="Include">
-                <e p="navbar.component.tsx" t="Include" />
-                <e p="navbar.css" t="Include" />
-              </e>
               <e p="sidebar" t="Include">
                 <e p="sidebar.component.tsx" t="Include" />
                 <e p="sidebar.css" t="Include" />
                 <e p="spaces-side-navigation" t="Include">
-                  <e p="loading-spaces.component.tsx" t="Include" />
-                  <e p="space-nav-item.component.tsx" t="Include" />
                   <e p="spaces-side-navigation.component.tsx" t="Include" />
                 </e>
               </e>
@@ -308,6 +302,9 @@
             <e p="serviceWorker.ts" t="Include" />
             <e p="setupTests.ts" t="Include" />
             <e p="shared" t="Include">
+              <e p="components" t="Include">
+                <e p="loading.component.tsx" t="Include" />
+              </e>
               <e p="Models" t="Include">
                 <e p="feed-provider.enum.ts" t="Include" />
                 <e p="post-filter.enum.ts" t="Include" />
@@ -316,6 +313,8 @@
               </e>
             </e>
             <e p="state" t="Include">
+              <e p="active-space.reducer.tsx" t="Include" />
+              <e p="active-space.state.tsx" t="Include" />
               <e p="spaces.state.tsx" t="Include" />
             </e>
             <e p="tailwind.css" t="Include" />

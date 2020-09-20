@@ -1,10 +1,18 @@
 ﻿import React, { FunctionComponent } from 'react';
 import { Loading } from '../../shared/components/loading.component';
 import { TechnologySpace } from '../../shared/models/technology-space.model';
-import { useSpaces } from '../../state/spaces.state';
+import { useActiveSpaceReducer } from '../../state/active-space/active-space.context';
+import { useSpacesState } from '../../state/spaces/spaces.context';
 
 export const ContentSpace = () => {
-	const { spaces, activeSpace } = useSpaces();
+	const { spaces } = useSpacesState();
+	const { state, dispatch } = useActiveSpaceReducer();
+
+	if (state === null) {
+		return (<Loading />)
+	}
+
+	const { activeSpace, posts } = state;
 
 	return (
 		<div className="ContentSpace p-2">
