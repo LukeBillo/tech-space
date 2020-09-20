@@ -281,9 +281,6 @@
             <e p="components" t="Include">
               <e p="content-space" t="Include">
                 <e p="content-space.component.tsx" t="Include" />
-                <e p="display-space" t="Include">
-                  <e p="display-space.component.tsx" t="Include" />
-                </e>
               </e>
               <e p="navbar" t="Include">
                 <e p="navbar.component.tsx" t="Include" />
@@ -299,8 +296,9 @@
                 </e>
               </e>
             </e>
+            <e p="context" t="Include" />
             <e p="http" t="Include">
-              <e p="axios.client.ts" t="Include" />
+              <e p="axios.http.ts" t="Include" />
               <e p="tech-spaces-posts.http.ts" t="Include" />
               <e p="tech-spaces.http.ts" t="Include" />
             </e>
@@ -312,6 +310,7 @@
             <e p="shared" t="Include">
               <e p="Models" t="Include">
                 <e p="feed-provider.enum.ts" t="Include" />
+                <e p="post-filter.enum.ts" t="Include" />
                 <e p="technology-space-post.model.ts" t="Include" />
                 <e p="technology-space.model.ts" t="Include" />
               </e>
@@ -336,6 +335,7 @@
         <e p="Models" t="Include">
           <e p="FeedProvider.cs" t="Include" />
           <e p="Post.cs" t="Include" />
+          <e p="PostFilter.cs" t="Include" />
           <e p="Space.cs" t="Include" />
           <e p="SpaceFeed.cs" t="Include" />
         </e>

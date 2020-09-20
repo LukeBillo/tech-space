@@ -11,11 +11,12 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      gray: {
-        ...colors.gray,
-        700: '#444444',
-        800: '#222222'
-      }
+      primary: colors.white,
+      secondary: {
+        light: '#201c2b',
+        default: '#201c2b',
+        dark: '#191523',
+      },
     },
     extend: {},
   },

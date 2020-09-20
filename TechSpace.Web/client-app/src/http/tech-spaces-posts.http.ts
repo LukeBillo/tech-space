@@ -1,5 +1,5 @@
 import { AxiosInstance } from "axios";
-import { AxiosClient } from "./axios.client";
+import { AxiosClient } from "./axios.http";
 import { TechnologySpacePost } from "../models/technology-space-post.model";
 
 export class TechSpacesPostsHttpClient {

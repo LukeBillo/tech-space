@@ -1,6 +1,6 @@
 ﻿import {AxiosInstance} from "axios";
 import { TechnologySpace } from "../shared/models/technology-space.model";
-import { AxiosClient } from "./axios.client";
+import { AxiosClient } from "./axios.http";
 
 export class TechSpacesHttpClient {
     constructor(private readonly axiosClient: AxiosInstance) {}

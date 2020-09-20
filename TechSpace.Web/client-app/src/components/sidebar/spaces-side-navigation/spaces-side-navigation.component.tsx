@@ -1,12 +1,7 @@
 import { TechnologySpace } from '../../../shared/models/technology-space.model';
-import { LoadingSpaces } from './loading-spaces.component';
-import { SpaceNavItem } from './space-nav-item.component';
+import { Loading } from '../../../shared/components/loading.component';
 import React, { FunctionComponent } from 'react';
 import { useSpaces } from '../../../state/spaces.state';
-
-const ConstructSpaceNavItem = (technologySpace: TechnologySpace, isActive: boolean) => {
-	return <SpaceNavItem key={technologySpace.identifier} space={technologySpace} isActive={isActive} />;
-};
 
 export const SpacesSideNavigation: FunctionComponent = () => {
 	const { spaces, activeSpace } = useSpaces();
@@ -14,8 +9,28 @@ export const SpacesSideNavigation: FunctionComponent = () => {
 	return (
 		<div className={'SpacesSideNavigation mx-8 my-2'}>
 			<h2>Spaces</h2>
-			<hr />
-			{spaces ? spaces.map((space) => ConstructSpaceNavItem(space, space === activeSpace)) : <LoadingSpaces />}
+			{spaces ? spaces.map((space) => constructSpaceNavItem(space, space === activeSpace)) : <Loading />}
 		</div>
 	);
 };
+
+export type SpaceNavItemProps = {
+    space: TechnologySpace,
+    isActive: boolean
+}
+
+const constructSpaceNavItem = (technologySpace: TechnologySpace, isActive: boolean) => {
+	return <SpaceNavItem key={technologySpace.identifier} space={technologySpace} isActive={isActive} />;
+};
+
+const SpaceNavItem: FunctionComponent<SpaceNavItemProps> = (props: SpaceNavItemProps) => {
+    const displayName = props.isActive ?
+        `${props.space.name} - Active` :
+        props.space.name;
+
+    return (
+        <div className={"SpaceNavItem pl-4 py-2"}>
+            <a href={'#'} className={"hover:bg-gray cursor-pointer"}>{displayName}</a>
+        </div>
+    );
+}

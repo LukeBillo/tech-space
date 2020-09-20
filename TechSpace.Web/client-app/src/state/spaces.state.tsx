@@ -1,4 +1,4 @@
-import React, { createContext, Props, useState, FunctionComponent, useContext, useEffect } from 'react';
+import React, { createContext, useState, FunctionComponent, useContext, useEffect } from 'react';
 import { TechnologySpace } from '../shared/models/technology-space.model'
 import { TechSpacesClient } from '../http/tech-spaces.http';
 import { find, head } from 'lodash';
@@ -12,7 +12,7 @@ const retrieveSpaces = async (setSpacesState: SpacesStateSetter) => {
         head(spaces);
 
     if (defaultActiveSpace === undefined) {
-        throw "Looks like no spaces were loaded! Something's gone horribly wrong.";
+        throw new Error("Looks like no spaces were loaded! Something's gone horribly wrong.");
     }
 
     setSpacesState({
@@ -37,7 +37,7 @@ export type SpacesStateHook = [SpacesState, SpacesStateSetter];
 
 export const SpacesContext = createContext<SpacesStateHook>([null, () => {}]);
 
-export const SpacesContextProvider: FunctionComponent = (props: Props<any>) => {
+export const SpacesContextProvider: FunctionComponent = ({ children }) => {
     const [spacesState, setSpacesState] = useState<SpacesState>(null);
 
     useEffect(() => {
@@ -48,7 +48,7 @@ export const SpacesContextProvider: FunctionComponent = (props: Props<any>) => {
 
     return (
         <SpacesContext.Provider value={[spacesState, setSpacesState]}>
-            {props.children}
+            {children}
         </SpacesContext.Provider>
     );
 };

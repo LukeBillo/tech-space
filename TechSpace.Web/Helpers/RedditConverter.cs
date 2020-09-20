@@ -15,6 +15,7 @@ namespace TechSpace.Web.Helpers
                 Title = redditPost.Title,
                 Content = content,
                 UrlLink = redditPost.Url,
+                
                 Source = FeedProvider.Reddit
             };
         }

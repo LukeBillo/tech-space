@@ -1,1 +1,4 @@
-export type FeedProvider = "Reddit" | "Dev.to"
+export enum FeedProvider {
+    Reddit = "Reddit",
+    DevTo = "Dev.to"
+}
