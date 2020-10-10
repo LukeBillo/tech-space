@@ -46,6 +46,7 @@
         <e p="TechSpace.Data.Migrations.csproj" t="IncludeRecursive" />
         <e p="TestData" t="Include">
           <e p="csharp-space.sql" t="Include" />
+          <e p="javascript-space.sql" t="Include" />
         </e>
       </e>
       <e p="TechSpace.DevTo" t="IncludeRecursive">
@@ -204,6 +205,7 @@
           <e p="node_modules\pretty-format" t="IncludeRecursive" />
           <e p="node_modules\react" t="IncludeRecursive" />
           <e p="node_modules\react-dom" t="IncludeRecursive" />
+          <e p="node_modules\react-markdown" t="IncludeRecursive" />
           <e p="node_modules\react-scripts" t="IncludeRecursive" />
           <e p="node_modules\strip-ansi" t="IncludeRecursive" />
           <e p="node_modules\tailwindcss" t="IncludeRecursive" />
@@ -292,6 +294,9 @@
               </e>
             </e>
             <e p="context" t="Include" />
+            <e p="hooks" t="Include">
+              <e p="spaces.context.tsx" t="Include" />
+            </e>
             <e p="http" t="Include">
               <e p="axios.http.ts" t="Include" />
               <e p="tech-spaces-posts.http.ts" t="Include" />
@@ -311,11 +316,6 @@
                 <e p="post-filter.enum.ts" t="Include" />
                 <e p="technology-space-post.model.ts" t="Include" />
                 <e p="technology-space.model.ts" t="Include" />
-              </e>
-            </e>
-            <e p="state" t="Include">
-              <e p="spaces" t="Include">
-                <e p="spaces.context.tsx" t="Include" />
               </e>
             </e>
             <e p="tailwind.css" t="Include" />
