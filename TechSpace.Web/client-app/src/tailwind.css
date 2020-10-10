@@ -31,3 +31,7 @@ h6 {
 @tailwind components;
 
 @tailwind utilities;
+
+.grid-auto-rows-full {
+    grid-auto-rows: 1fr;
+}

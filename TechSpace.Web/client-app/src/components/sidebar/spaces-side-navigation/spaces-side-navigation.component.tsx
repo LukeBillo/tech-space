@@ -2,7 +2,7 @@ import { TechnologySpace } from '../../../shared/models/technology-space.model';
 import { Loading } from '../../../shared/components/loading.component';
 import React, { FunctionComponent } from 'react';
 import { head } from 'lodash';
-import { useSpaces } from '../../../state/spaces/spaces.context';
+import { useSpaces } from '../../../hooks/spaces.context';
 
 export const SpacesSideNavigation: FunctionComponent = () => {
 	const { spaces, activeSpace, setActiveSpace } = useSpaces();

@@ -4,7 +4,7 @@ import { SpacesSideNavigation } from './spaces-side-navigation/spaces-side-navig
 
 export const SideBar: FunctionComponent = () => {
 	return (
-		<div className={'SideBar bg-secondary-light max-h-screen'}>
+		<div className={'SideBar bg-secondary-light max-h-screen px-6'}>
 			<div className="logo-with-title">
 				<h1>TechSpace</h1>
 			</div>
