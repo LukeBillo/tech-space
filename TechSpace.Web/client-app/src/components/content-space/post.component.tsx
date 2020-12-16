@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { TechnologySpacePost } from '../../shared/models/technology-space-post.model';
+import { TechnologySpacePost } from '../../models/technology-space-post.model';
 
 type PostProps = {
     post: TechnologySpacePost

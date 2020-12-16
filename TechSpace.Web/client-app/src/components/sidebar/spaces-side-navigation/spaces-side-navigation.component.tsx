@@ -1,7 +1,6 @@
-import { TechnologySpace } from '../../../shared/models/technology-space.model';
-import { Loading } from '../../../shared/components/loading.component';
+import { TechnologySpace } from '../../../models/technology-space.model';
+import { Loader } from '../../loading/loader.component';
 import React, { FunctionComponent } from 'react';
-import { head } from 'lodash';
 import { useSpaces } from '../../../hooks/spaces.context';
 
 export const SpacesSideNavigation: FunctionComponent = () => {
@@ -15,7 +14,7 @@ export const SpacesSideNavigation: FunctionComponent = () => {
 					constructSpaceNavItem(space, space.identifier === activeSpace?.identifier, setActiveSpace)
 				)
 			) : (
-				<Loading />
+				<Loader />
 			)}
 		</div>
 	);

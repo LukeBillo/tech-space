@@ -1,7 +1,7 @@
 ﻿import React, { FunctionComponent } from 'react';
-import { Loading } from '../../shared/components/loading.component';
-import { TechnologySpacePost } from '../../shared/models/technology-space-post.model';
-import { TechnologySpace } from '../../shared/models/technology-space.model';
+import { Loader } from '../loading/loader.component';
+import { TechnologySpacePost } from '../../models/technology-space-post.model';
+import { TechnologySpace } from '../../models/technology-space.model';
 import { useSpaces } from '../../hooks/spaces.context';
 import { Post } from './post.component';
 
@@ -10,7 +10,7 @@ export const ContentSpace = () => {
 
 	return (
 		<div className="ContentSpace overflow-y-scroll flex-grow p-2">
-			{spaces && activeSpace ? <ActiveSpaceDisplay activeSpace={activeSpace} posts={postsForActiveSpace} /> : <Loading />}
+			{spaces && activeSpace ? <ActiveSpaceDisplay activeSpace={activeSpace} posts={postsForActiveSpace} /> : <Loader />}
 		</div>
 	);
 };

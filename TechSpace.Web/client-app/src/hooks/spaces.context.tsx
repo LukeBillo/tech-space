@@ -1,10 +1,9 @@
 import React, { createContext, useState, FunctionComponent, useContext, useEffect } from 'react';
-import { TechnologySpace } from '../shared/models/technology-space.model';
+import { TechnologySpace } from '../models/technology-space.model';
 import { TechSpacesClient } from '../http/tech-spaces.http';
-import { TechnologySpacePost } from '../shared/models/technology-space-post.model';
+import { TechnologySpacePost } from '../models/technology-space-post.model';
 import { TechSpacesPostsClient } from '../http/tech-spaces-posts.http';
 import { head, isEmpty } from 'lodash';
-import { act } from 'react-dom/test-utils';
 
 export type SpacesState = {
 	spaces: TechnologySpace[];
