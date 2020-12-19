@@ -13,6 +13,7 @@ export type SpacesState = {
 
 export interface SpacesOperations {
 	setActiveSpace(activeSpace: TechnologySpace): Promise<void>;
+	setActiveSpaceById(spaceId: string): Promise<void>;
 	fetchAllSpaces(): Promise<void>;
 }
 
@@ -35,6 +36,16 @@ export function useProvideSpaces(): SpacesHook {
 		setSpacesState({ ...spacesState, activeSpace, postsForActiveSpace: posts });
 	};
 
+	const setActiveSpaceById = async (spaceId: string) => {
+		const space = spacesState.spaces.find(space => space.identifier === spaceId);
+		if (!space) {
+			console.error(`Failed to find space '${spaceId}'`);
+			return;
+		}
+
+		await setActiveSpace(space);
+	};
+
 	const fetchAllSpaces = async () => {
 		const spaces = await TechSpacesClient.getAll();
 		setSpacesState({ ...spacesState, spaces });
@@ -43,14 +54,18 @@ export function useProvideSpaces(): SpacesHook {
 	return {
 		...spacesState,
 		setActiveSpace,
-		fetchAllSpaces
+		setActiveSpaceById,
+		fetchAllSpaces,
 	};
 }
 
 export const ProvideSpaces: FunctionComponent = ({ children }) => {
 	const spacesHook = useProvideSpaces();
 
-	return <SpacesContext.Provider value={spacesHook}>{children}</SpacesContext.Provider>;
+	return (
+		<SpacesContext.Provider value={spacesHook}>
+			{children}
+		</SpacesContext.Provider>);
 };
 
 export const useSpaces = (): SpacesHook => {

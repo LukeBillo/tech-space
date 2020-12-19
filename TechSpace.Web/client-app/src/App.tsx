@@ -1,19 +1,14 @@
-import React from "react";
-import { SideBar } from "./components/sidebar/sidebar.component";
-import { ContentSpace } from "./components/content-space/content-space.component";
-import './tailwind.output.css'
-import { ProvideSpaces } from "./hooks/spaces.context";
+import React, { FunctionComponent } from "react";
+import { ProvideSpaces } from './hooks/spaces.context';
+import { HomePage } from "./components/home-page/home-page.component";
 
-const App = () => {
+import './tailwind.output.css';
+
+const App: FunctionComponent = () => {
   return (
-    <div className="App max-w-full h-screen text-white bg-secondary-dark">
-      <div className={"container max-w-full h-full flex flex-row"}>
-        <ProvideSpaces>
-          <SideBar />
-          <ContentSpace />
-        </ProvideSpaces>
-      </div>
-    </div>
+			<ProvideSpaces>
+        <HomePage />
+			</ProvideSpaces>
   );
 }
 
