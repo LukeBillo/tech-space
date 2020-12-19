@@ -9,6 +9,7 @@ namespace TechSpace.Web.Helpers
         {
             return new Post
             {
+                Id = devToArticle.Id.ToString(),
                 Author = devToArticle.User.Name,
                 Content = devToArticle.Description,
                 Source = FeedProvider.DevTo,
