@@ -3,9 +3,11 @@ import { Loader } from '../../loading/loader.component';
 import { useSpaces } from '../../../../hooks/spaces.context';
 import { TechnologySpace } from '../../../../models/technology-space.model';
 import { Link } from 'react-router-dom';
+import { useActiveSpace } from '../../../../hooks/active-space.context';
 
 export const SpacesSideNavigation: FunctionComponent = () => {
-	const { spaces, activeSpace, setActiveSpace } = useSpaces();
+	const { spaces } = useSpaces();
+	const { activeSpace, setActiveSpace } = useActiveSpace();
 
 	return (
 		<div className={'SpacesSideNavigation mx-8 my-2'}>

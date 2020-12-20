@@ -7,7 +7,7 @@ type PostProps = {
     post: TechnologySpacePost
 };
 
-export const Post: FunctionComponent<PostProps> = ({ post }) => {
+export const PostTile: FunctionComponent<PostProps> = ({ post }) => {
     return (
     <div className={"Post bg-secondary-light rounded-md p-2"}>
         <h4 className={"post-title"}>
