@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using CommandLine;
+﻿using CommandLine;
 
 namespace TechSpace.Data.Migrations
 {

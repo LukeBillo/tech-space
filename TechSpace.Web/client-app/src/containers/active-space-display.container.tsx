@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect } from "react";
-import { Router, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { SpaceDisplay } from "../components/content-space/space-display.component";
 import { Loader } from "../components/shared/loading/loader.component";
 import { useActiveSpace } from "../hooks/active-space.context";
@@ -25,7 +25,7 @@ export const ActiveSpaceDisplay: FunctionComponent = () => {
         }
 
         setActiveSpace(space);
-    }, [spaceId, spaces, setActiveSpace])
+    }, [spaceId, activeSpace, spaces, setActiveSpace])
 
     return (activeSpace && postsForActiveSpace ?
         (

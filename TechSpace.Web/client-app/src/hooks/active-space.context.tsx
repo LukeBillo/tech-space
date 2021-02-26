@@ -46,11 +46,11 @@ export const ProvideActiveSpace: FunctionComponent = ({ children }) => {
 };
 
 export const useActiveSpace = (): ActiveSpaceHook => {
-    const activeSpaceHok = useContext(ActiveSpaceContext);
+    const activeSpaceHook = useContext(ActiveSpaceContext);
     
-	if (activeSpaceHok === null) {
+	if (activeSpaceHook === null) {
 		throw new Error("ActiveSpaceContext did not contain the hook- perhaps you didn't provide the ActiveSpaceContext?");
 	}
 
-	return activeSpaceHok;
+	return activeSpaceHook;
 };

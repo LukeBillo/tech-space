@@ -9,5 +9,8 @@ namespace TechSpace.DevTo
     {
         [Get("/articles")]
         Task<List<DevToArticle>> GetArticles([Query] GetArticleQueryParams queryParams = null);
+
+        [Get("/articles/{id}")]
+        Task<DevToArticle> GetArticleById(string id);
     }
 }

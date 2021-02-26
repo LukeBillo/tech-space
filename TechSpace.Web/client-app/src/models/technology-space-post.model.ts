@@ -3,6 +3,7 @@ import { PostFilter } from './post-filter.enum'
 
 export type TechnologySpacePost = {
     id: string;
+    spaceId: string;
     author: string;
     title: string;
     content: string;
@@ -11,6 +12,4 @@ export type TechnologySpacePost = {
     filter: PostFilter;
 }
 
-export const GetUniquePostId = (post: TechnologySpacePost) => {
-    return `${post.source}-${post.id}`;
-}
+export const GenerateUniqueKeyForPost = (post: TechnologySpacePost) => `${post.source}-${post.id}`;

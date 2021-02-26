@@ -3,33 +3,58 @@ import { FunctionComponent, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useActivePost } from "../hooks/active-post.context";
 import { TechSpacesPostsClient } from "../http/tech-spaces-posts.http";
-import { GetUniquePostId } from "../models/technology-space-post.model";
+import {
+  GenerateUniqueKeyForPost,
+  TechnologySpacePost,
+} from "../models/technology-space-post.model";
 import { PostDisplay } from "../components/post-display/post-display.component";
+import { useActiveSpace } from "../hooks/active-space.context";
+import { TechSpacesClient } from "../http/tech-spaces.http";
 
 export type ActivePostDisplayParams = {
-    provider: string;
-    postId: string;
+  provider: string;
+  postId: string;
 };
 
+const isCorrectActivePost = (
+  provider: string,
+  postId: string,
+  activePost: TechnologySpacePost | null
+) => activePost && activePost.source === provider && activePost.id === postId;
+
 export const ActivePostDisplay: FunctionComponent = () => {
-    const { provider, postId } = useParams<ActivePostDisplayParams>();
-    const { activePost, setActivePost } = useActivePost();
+  const { provider, postId } = useParams<ActivePostDisplayParams>();
+  const { activePost, setActivePost } = useActivePost();
+  const { activeSpace, setActiveSpace } = useActiveSpace();
 
+  useEffect(() => {
+    if (isCorrectActivePost(provider, postId, activePost)) {
+      return;
+    }
 
-    useEffect(() => {
-        if (activePost && GetUniquePostId(activePost) === postId) {
-            return;
-        }
+    TechSpacesPostsClient.getById(provider, postId).then((fetchedPost) => {
+      setActivePost(fetchedPost);
 
-        TechSpacesPostsClient.getById(provider, postId).then(post => {
-            setActivePost(post);
+      if (fetchedPost.spaceId !== activeSpace?.identifier) {
+        TechSpacesClient.get(fetchedPost.spaceId).then((fetchedSpace) => {
+          setActiveSpace(fetchedSpace);
         });
-    }, [provider, postId, activePost, setActivePost]);
+      }
+    });
+  }, [
+    activePost,
+    activeSpace,
+    postId,
+    provider,
+    setActivePost,
+    setActiveSpace,
+  ]);
 
-    return (
-        <div>
-            {activePost && GetUniquePostId(activePost) === postId &&
-                <PostDisplay post={activePost} />}
-        </div>
-    );
+  return (
+    <>
+      {activePost && GenerateUniqueKeyForPost(activePost) === postId && (
+        <PostDisplay post={activePost} />
+      )}
+    </>
+  );
 };

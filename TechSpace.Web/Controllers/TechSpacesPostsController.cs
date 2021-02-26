@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TechSpace.Web.Models;
 using TechSpace.Web.Services;
 
 namespace TechSpace.Web.Controllers
 {
-    [Route("spaces/{name}/posts")]
+    [ApiController]
     public class TechSpacesPostsController
     {
         private readonly ITechSpacesService _techSpacesService;
@@ -19,31 +18,23 @@ namespace TechSpace.Web.Controllers
         }
 
         [HttpGet]
+        [Route("spaces/{name}/posts")]
         public async Task<IActionResult> GetPostsForSpace([FromRoute] string name)
         {
-            if (name == "popular")
-            {
-                var popularPostsForAllSpaces = await GetPopularPosts();
-                return new OkObjectResult(popularPostsForAllSpaces);
-            }
-            
             var space = await _techSpacesService.Get(name);
             var postsForSpace = await _postsService.GetPopularPostsForSpace(space);
             return new OkObjectResult(postsForSpace);
         }
 
-        private async Task<List<Post>> GetPopularPosts()
+        [HttpGet]
+        [Route("spaces/{name}/posts/{provider}/{id}")]
+        public async Task<IActionResult> GetPostById(
+            [FromRoute] string name,
+            [FromRoute] FeedProvider provider,
+            [FromRoute] string id)
         {
-            var spaces = await _techSpacesService.GetAll();
-            var postsForAllSpaces = new List<Post>();
-            
-            foreach (var space in spaces)
-            {
-                var postsForSpace = await _postsService.GetPopularPostsForSpace(space);
-                postsForAllSpaces.AddRange(postsForSpace);
-            }
-
-            return postsForAllSpaces;
+            var space = await _techSpacesService.Get(name);
+            return new OkObjectResult(await _postsService.GetPostsById(id, space.Identifier, provider));
         }
     }
 }

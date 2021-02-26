@@ -4,11 +4,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using TechSpace.Data.DependencyInjection;
 using TechSpace.DevTo.DependencyInjection;
-using TechSpace.Reddit;
 using TechSpace.Reddit.DependencyInjection;
 using TechSpace.Web.Services;
 
@@ -25,12 +22,20 @@ namespace TechSpace.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("https://localhost:5001");
+                });
+            });
+
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "client-app/build"; });
 
             // Data layer
             services.AddTechSpaceRepositories(Configuration["ConnectionStrings:TechSpace"]);
-            
+
             // Services for logic abstraction
             services.AddSingleton<ITechSpacesService, SpacesService>();
             services.AddSingleton<IPostsService, PostsService>();
@@ -57,6 +62,8 @@ namespace TechSpace.Web
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

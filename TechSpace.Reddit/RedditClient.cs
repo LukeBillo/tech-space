@@ -9,7 +9,8 @@ namespace TechSpace.Reddit
 {
     public interface IRedditClient
     {
-        Task<List<Post>> GetSubredditPosts(string subredditName, PostFilter postFilter);
+        Task<List<Post>> GetSubredditPosts(string subreddit, PostFilter postFilter);
+        Task<Post> GetPostById(string subreddit, string id);
     }
 
     public class RedditClient : IRedditClient
@@ -21,13 +22,23 @@ namespace TechSpace.Reddit
             _redditApi = RestService.For<IRedditApi>(redditHttpClient);
         }
 
-        public async Task<List<Post>> GetSubredditPosts(string subredditName, PostFilter postFilter)
+        public async Task<List<Post>> GetSubredditPosts(string subreddit, PostFilter postFilter)
         {
-            var posts = await _redditApi.GetSubredditPosts(subredditName, postFilter);
+            var posts = await _redditApi.GetSubredditPosts(subreddit, postFilter);
             return posts.ToListing()
                 .Children
                 .Select(child => child.ToPost())
                 .ToList();
+        }
+
+        public async Task<Post> GetPostById(string subreddit, string id)
+        {
+            var post = await _redditApi.GetSubredditPostById(subreddit, id);
+            return post.First()
+                .ToListing()
+                .Children
+                .Select(child => child.ToPost())
+                .FirstOrDefault();
         }
     }
 }
