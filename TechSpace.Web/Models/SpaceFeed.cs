@@ -6,8 +6,6 @@ namespace TechSpace.Web.Models
 {
     public class SpaceFeed
     {
-        public SpaceFeed() {}
-
         public SpaceFeed(SpaceFeedRow row)
         {
             Provider = Enum.Parse<FeedProvider>(row.FeedProvider);

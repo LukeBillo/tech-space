@@ -5,14 +5,15 @@ import { useActivePost } from "../hooks/active-post.context";
 import { TechSpacesPostsClient } from "../http/tech-spaces-posts.http";
 import {
   GenerateUniqueKeyForPost,
+  GenerateUniqueKeyForProviderAndPostId,
   TechnologySpacePost,
 } from "../models/technology-space-post.model";
 import { PostDisplay } from "../components/post-display/post-display.component";
 import { useActiveSpace } from "../hooks/active-space.context";
-import { TechSpacesClient } from "../http/tech-spaces.http";
+import { FeedProvider } from "../models/feed-provider.enum";
 
 export type ActivePostDisplayParams = {
-  provider: string;
+  provider: FeedProvider;
   postId: string;
 };
 
@@ -20,7 +21,7 @@ const isCorrectActivePost = (
   provider: string,
   postId: string,
   activePost: TechnologySpacePost | null
-) => activePost && activePost.source === provider && activePost.id === postId;
+) => activePost && activePost.provider === provider && activePost.id === postId;
 
 export const ActivePostDisplay: FunctionComponent = () => {
   const { provider, postId } = useParams<ActivePostDisplayParams>();
@@ -34,12 +35,6 @@ export const ActivePostDisplay: FunctionComponent = () => {
 
     TechSpacesPostsClient.getById(provider, postId).then((fetchedPost) => {
       setActivePost(fetchedPost);
-
-      if (fetchedPost.spaceId !== activeSpace?.identifier) {
-        TechSpacesClient.get(fetchedPost.spaceId).then((fetchedSpace) => {
-          setActiveSpace(fetchedSpace);
-        });
-      }
     });
   }, [
     activePost,
@@ -52,7 +47,7 @@ export const ActivePostDisplay: FunctionComponent = () => {
 
   return (
     <>
-      {activePost && GenerateUniqueKeyForPost(activePost) === postId && (
+      {activePost && GenerateUniqueKeyForPost(activePost) === GenerateUniqueKeyForProviderAndPostId(provider, postId) && (
         <PostDisplay post={activePost} />
       )}
     </>

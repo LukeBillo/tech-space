@@ -17,7 +17,7 @@ namespace TechSpace.Web.Services
     public interface IPostsService
     {
         Task<List<Post>> GetPopularPostsForSpace(Space space);
-        Task<Post> GetPostsById(string id, string spaceId, FeedProvider provider);
+        Task<Post> GetPostsById(string id, FeedProvider provider);
     }
 
     public class PostsService : IPostsService
@@ -43,27 +43,19 @@ namespace TechSpace.Web.Services
                 .ToList();
         }
 
-        public async Task<Post> GetPostsById(string id, string spaceId, FeedProvider provider) => provider switch
+        public async Task<Post> GetPostsById(string id, FeedProvider provider) => provider switch
         {
-            FeedProvider.Reddit => RedditConverter.RedditPostToTechnologySpacePost(await GetRedditPost(id, spaceId), spaceId),
-            FeedProvider.DevTo => DevToConverter.DevToArticleToTechnologySpacePost(await GetDevToArticle(id), spaceId),
+            FeedProvider.Reddit => RedditConverter.RedditPostToTechnologySpacePost(await GetRedditPost(id)),
+            FeedProvider.DevTo => DevToConverter.DevToArticleToTechnologySpacePost(await GetDevToArticle(id)),
             _ => throw new ArgumentOutOfRangeException(nameof(provider), provider, $"Failed to get post - unknown provider: {provider}")
         };
 
-        private async Task<RedditPost> GetRedditPost(string id, string spaceId)
+        private async Task<RedditPost> GetRedditPost(string id)
         {
-            var feeds = await _spaceFeedRepository.Get(spaceId);
-            var spaceFeed = feeds
-                .Select(feed => new SpaceFeed(feed))
-                .FirstOrDefault(feed => feed.Provider is FeedProvider.Reddit);
-
-            if (spaceFeed is null)
-                return null;
-
-            return await _redditClient.GetPostById(spaceFeed.Connection.Resource, id);
+            return await _redditClient.GetPostById(id);
         }
 
-        private Task<DevToArticle> GetDevToArticle(string id) => _devToClient.GetArticleById(id);
+        private Task<Article> GetDevToArticle(string id) => _devToClient.GetArticleById(id);
 
         private async Task<List<Post>> GetRedditPostsForSpace(Space space, RedditPostFilter postFilter)
         {
@@ -77,20 +69,21 @@ namespace TechSpace.Web.Services
             }
 
             return posts
-                .Select(post => RedditConverter.RedditPostToTechnologySpacePost(post, space.Identifier))
+                .Select(RedditConverter.RedditPostToTechnologySpacePost)
                 .ToList();
         }
 
         private async Task<List<Post>> GetDevToPostsForSpace(Space space)
         {
             var devToFeeds = space.Feeds.Where(feed => feed.Provider == FeedProvider.DevTo);
-            var posts = new List<DevToArticle>();
+            var posts = new List<Article>();
 
             foreach (var devToFeed in devToFeeds)
             {
                 var articlesForTag = await _devToClient.GetArticles(new GetArticleQueryParams
                 {
                     Top = 1,
+                    ArticlesPerPage = 10,
                     Tag = devToFeed.Connection.Resource
                 });
 
@@ -98,7 +91,7 @@ namespace TechSpace.Web.Services
             }
 
             return posts
-                .Select(post => DevToConverter.DevToArticleToTechnologySpacePost(post, space.Identifier))
+                .Select(DevToConverter.DevToArticleToTechnologySpacePost)
                 .ToList();
         }
     }

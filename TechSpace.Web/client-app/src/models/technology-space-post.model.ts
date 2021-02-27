@@ -3,13 +3,14 @@ import { PostFilter } from './post-filter.enum'
 
 export type TechnologySpacePost = {
     id: string;
-    spaceId: string;
     author: string;
     title: string;
     content: string;
-    urlLink: string;
-    source: FeedProvider;
+    passthroughUrl: string;
+    provider: FeedProvider;
     filter: PostFilter;
 }
 
-export const GenerateUniqueKeyForPost = (post: TechnologySpacePost) => `${post.source}-${post.id}`;
+export const GenerateUniqueKeyForPost = (post: TechnologySpacePost) =>  GenerateUniqueKeyForProviderAndPostId(post.provider, post.id);
+
+export const GenerateUniqueKeyForProviderAndPostId = (provider: FeedProvider, postId: string) => `${provider}-${postId}`;

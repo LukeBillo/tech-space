@@ -11,7 +11,7 @@ export const PostTile: FunctionComponent<PostProps> = ({ post }) => {
     return (
     <div className={"Post bg-secondary-light rounded-md p-2"}>
         <h4 className={"post-title"}>
-            <Link to={`/${post.source}/post/${post.id}`}>{post.title} | {post.source}</Link>
+            <Link to={`/${post.provider}/post/${post.id}`}>{post.title} | {post.provider}</Link>
         </h4>
         <div className={"post-preview max-h-8 overflow-hidden"}>
             <ReactMarkdown source={post.content} />

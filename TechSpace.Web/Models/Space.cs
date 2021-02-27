@@ -6,8 +6,6 @@ namespace TechSpace.Web.Models
 {
     public class Space
     {
-        public Space() {}
-
         public Space(SpaceRow spaceRow, IEnumerable<SpaceFeedRow> spaceFeedRows)
         {
             Identifier = spaceRow.Identifier;
