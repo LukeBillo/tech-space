@@ -10,7 +10,7 @@ namespace TechSpace.Reddit
     public interface IRedditClient
     {
         Task<List<Post>> GetSubredditPosts(string subreddit, PostFilter postFilter);
-        Task<Post> GetPostById(string subreddit, string id);
+        Task<Post> GetPostById(string id);
     }
 
     public class RedditClient : IRedditClient
@@ -31,11 +31,10 @@ namespace TechSpace.Reddit
                 .ToList();
         }
 
-        public async Task<Post> GetPostById(string subreddit, string id)
+        public async Task<Post> GetPostById(string id)
         {
-            var post = await _redditApi.GetSubredditPostById(subreddit, id);
-            return post.First()
-                .ToListing()
+            var post = await _redditApi.SearchListings(new SearchParams { Id36 = id });
+            return post.ToListing()
                 .Children
                 .Select(child => child.ToPost())
                 .FirstOrDefault();

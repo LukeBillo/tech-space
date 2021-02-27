@@ -11,7 +11,7 @@ namespace TechSpace.Reddit
         [Get("/r/{subreddit}/{filter}.json")]
         Task<RedditGeneric> GetSubredditPosts(string subreddit, PostFilter filter);
 
-        [Get("/r/{subreddit}/{id}.json")]
-        Task<List<RedditGeneric>> GetSubredditPostById(string subreddit, string id);
+        [Get("/api/info")]
+        Task<RedditGeneric> SearchListings([Query] SearchParams searchParams);
     }
 }

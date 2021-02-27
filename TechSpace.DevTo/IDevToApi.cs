@@ -8,9 +8,9 @@ namespace TechSpace.DevTo
     public interface IDevToApi
     {
         [Get("/articles")]
-        Task<List<DevToArticle>> GetArticles([Query] GetArticleQueryParams queryParams = null);
+        Task<List<Article>> GetArticles([Query] GetArticleQueryParams queryParams = null);
 
         [Get("/articles/{id}")]
-        Task<DevToArticle> GetArticleById(string id);
+        Task<ArticleById> GetArticleById(string id);
     }
 }

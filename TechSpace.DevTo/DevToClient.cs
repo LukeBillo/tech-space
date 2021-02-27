@@ -8,8 +8,8 @@ namespace TechSpace.DevTo
 {
     public interface IDevToClient
     {
-        Task<List<DevToArticle>> GetArticles(GetArticleQueryParams queryParams = null);
-        Task<DevToArticle> GetArticleById(string id);
+        Task<List<Article>> GetArticles(GetArticleQueryParams queryParams = null);
+        Task<Article> GetArticleById(string id);
     }
     
     public class DevToClient : IDevToClient
@@ -21,8 +21,8 @@ namespace TechSpace.DevTo
             _devToApi = RestService.For<IDevToApi>(devToHttpClient);
         }
 
-        public Task<List<DevToArticle>> GetArticles(GetArticleQueryParams queryParams = null) => _devToApi.GetArticles(queryParams);
+        public Task<List<Article>> GetArticles(GetArticleQueryParams queryParams = null) => _devToApi.GetArticles(queryParams);
 
-        public Task<DevToArticle> GetArticleById(string id) => _devToApi.GetArticleById(id);
+        public async Task<Article> GetArticleById(string id) => (await _devToApi.GetArticleById(id)).ToArticle() ;
     }
 }
