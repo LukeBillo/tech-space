@@ -1,10 +1,13 @@
-import { TechnologySpace } from '../../../models/technology-space.model';
-import { Loader } from '../../loading/loader.component';
 import React, { FunctionComponent } from 'react';
-import { useSpaces } from '../../../hooks/spaces.context';
+import { Loader } from '../../loading/loader.component';
+import { useSpaces } from '../../../../hooks/spaces.context';
+import { TechnologySpace } from '../../../../models/technology-space.model';
+import { Link } from 'react-router-dom';
+import { useActiveSpace } from '../../../../hooks/active-space.context';
 
 export const SpacesSideNavigation: FunctionComponent = () => {
-	const { spaces, activeSpace, setActiveSpace } = useSpaces();
+	const { spaces } = useSpaces();
+	const { activeSpace, setActiveSpace } = useActiveSpace();
 
 	return (
 		<div className={'SpacesSideNavigation mx-8 my-2'}>
@@ -48,13 +51,13 @@ const SpaceNavItem: FunctionComponent<SpaceNavItemProps> = ({ space, isActive, s
 
 	return (
 		<div className={'SpaceNavItem pl-4 py-2'}>
-			<a
-				href={`#${space.identifier}`}
+			<Link
+				to={`/space/${space.identifier}`}
 				className={cssClasses}
 				onClick={() => setAsActiveSpace(space)}
 			>
 				{space.name}
-			</a>
+			</Link>
 		</div>
 	);
 };

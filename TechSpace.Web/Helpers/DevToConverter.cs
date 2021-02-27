@@ -1,19 +1,20 @@
-﻿using TechSpace.DevTo.Models;
+﻿using System;
+using TechSpace.DevTo.Models;
 using TechSpace.Web.Models;
 
 namespace TechSpace.Web.Helpers
 {
     internal static class DevToConverter
     {
-        public static Post DevToArticleToTechnologySpacePost(DevToArticle devToArticle)
+        public static Post DevToArticleToTechnologySpacePost(Article article)
         {
             return new Post
             {
-                Author = devToArticle.User.Name,
-                Content = devToArticle.Description,
-                Source = FeedProvider.DevTo,
-                Title = devToArticle.Title,
-                UrlLink = devToArticle.Url
+                Id = article.Id.ToString(),
+                Author = article.User.Name,
+                Content = article.Description,
+                Title = article.Title,
+                Provider = FeedProvider.DevTo
             };
         }
     }

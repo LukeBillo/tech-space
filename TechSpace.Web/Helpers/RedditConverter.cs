@@ -8,15 +8,16 @@ namespace TechSpace.Web.Helpers
         public static Post RedditPostToTechnologySpacePost(Reddit.Models.Post redditPost)
         {
             var content = string.IsNullOrEmpty(redditPost.SelfText) ? redditPost.SelfTextHtml : redditPost.SelfText;
+            var kind = EnumHelpers.GetEnumMemberValue(redditPost.Kind);
             
             return new Post
             {
+                Id = $"{kind}_{redditPost.Id}",
                 Author = redditPost.Author,
                 Title = redditPost.Title,
                 Content = content,
-                UrlLink = redditPost.Url,
-                
-                Source = FeedProvider.Reddit
+                PassthroughUrl = redditPost.Url,
+                Provider = FeedProvider.Reddit,
             };
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Refit;
 using TechSpace.Reddit.Models;
 
@@ -9,5 +10,8 @@ namespace TechSpace.Reddit
     {
         [Get("/r/{subreddit}/{filter}.json")]
         Task<RedditGeneric> GetSubredditPosts(string subreddit, PostFilter filter);
+
+        [Get("/api/info")]
+        Task<RedditGeneric> SearchListings([Query] SearchParams searchParams);
     }
 }

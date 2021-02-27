@@ -6,6 +6,8 @@ namespace TechSpace.Reddit.Models
 {
     public class Post
     {
+        public Kind Kind => Kind.Link;
+        
         [JsonProperty("approved_at_utc")]
         public int? ApprovedAtUtc { get; set; }
 

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace TechSpace.DevTo.Models
 {
-    public class DevToArticle
+    public class Article
     {
         [JsonProperty("type_of")] 
         public string TypeOf { get; set; }
@@ -58,16 +58,16 @@ namespace TechSpace.DevTo.Models
         public DateTime CreatedAt { get; set; }
 
         [JsonProperty("edited_at")]
-        public DateTime EditedAt { get; set; }
+        public DateTime? EditedAt { get; set; }
 
         [JsonProperty("crossposted_at")] 
-        public object CrosspostedAt { get; set; }
+        public DateTime? CrosspostedAt { get; set; }
 
         [JsonProperty("published_at")] 
         public DateTime PublishedAt { get; set; }
 
         [JsonProperty("last_comment_at")] 
-        public DateTime LastCommentAt { get; set; }
+        public DateTime? LastCommentAt { get; set; }
 
         [JsonProperty("published_timestamp")] 
         public DateTime PublishedTimestamp { get; set; }

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react"
 
-export const Loader: FunctionComponent = ({ isLoaded }) => {
+export const Loader: FunctionComponent = () => {
     return (<div>Loading...</div>)
 }

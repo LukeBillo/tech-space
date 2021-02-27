@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using TechSpace.Data;
-using TechSpace.Data.Models;
 using TechSpace.Web.Models;
 
 namespace TechSpace.Web.Services
